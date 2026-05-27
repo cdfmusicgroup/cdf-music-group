@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — CDF Music Group</title>
+<meta name="description" content="Get in touch with CDF Music Group. Sponsorship inquiries, artist submissions, and general contact.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#0a0a0a;
+  --near-black:#111111;
+  --dark:#1a1a1a;
+  --white:#ffffff;
+  --muted:#888888;
+  --blue:#2D8FFF;
+  --purple:#9B5CFF;
+  --amber:#C96C1A;
+  --pink:#FF3DAE;
+  --green:#3ecf8e;
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:'Barlow',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 48px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1e1e1e;
+}
+.nav-logo{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:22px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--white);text-decoration:none;
+}
+.nav-logo span{color:var(--blue);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white);}
+.nav-cta{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--black);background:var(--white);
+  padding:9px 20px;text-decoration:none;transition:background 0.2s,color 0.2s;
+}
+.nav-cta:hover{background:var(--blue);color:var(--white);}
+
+/* PAGE HEADER */
+.page-header{
+  padding:140px 48px 80px;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid #1a1a1a;
+}
+.page-header-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,#050510 0%,#0a0a18 40%,#0a0a0a 100%);
+}
+.page-header-glow{
+  position:absolute;top:-80px;right:-80px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(45,143,255,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.page-header-eyebrow{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:16px;position:relative;z-index:1;
+}
+.page-header h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(56px,8vw,110px);
+  text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;
+  position:relative;z-index:1;
+}
+.page-header h1 .outline{color:transparent;-webkit-text-stroke:2px #2a2a2a;}
+.page-header h1 .accent{color:var(--blue);}
+.page-header-sub{
+  font-size:15px;font-weight:300;color:#555;
+  max-width:480px;margin-top:24px;line-height:1.8;
+  position:relative;z-index:1;
+}
+
+/* MAIN LAYOUT */
+.main{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid #1a1a1a;
+}
+
+/* LEFT */
+.contact-info{
+  padding:72px 56px;
+  border-right:1px solid #1a1a1a;
+  display:flex;flex-direction:column;gap:56px;
+}
+.section-label{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:12px;display:block;
+}
+.contact-heading{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:32px;text-transform:uppercase;
+  line-height:0.95;margin-bottom:20px;
+}
+.contact-block{display:flex;flex-direction:column;gap:2px;}
+.contact-row{
+  display:flex;align-items:center;gap:16px;
+  padding:18px 20px;
+  background:var(--near-black);
+  border-left:3px solid transparent;
+  text-decoration:none;
+  transition:border-color 0.2s,background 0.2s;
+}
+.contact-row:hover{background:#111;border-left-color:var(--blue);}
+.contact-row-label{
+  font-family:'Space Mono',monospace;
+  font-size:8px;letter-spacing:0.2em;text-transform:uppercase;
+  color:#333;min-width:80px;flex-shrink:0;
+}
+.contact-row-value{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;font-size:17px;text-transform:uppercase;
+  letter-spacing:0.03em;color:var(--white);
+}
+.contact-row:hover .contact-row-value{color:var(--blue);}
+
+/* REASONS */
+.reasons{display:flex;flex-direction:column;gap:2px;}
+.reason{
+  padding:20px 20px;
+  background:var(--near-black);
+  border-left:3px solid transparent;
+  transition:border-color 0.2s;
+}
+.reason:hover{border-left-color:var(--blue);}
+.reason-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:17px;text-transform:uppercase;
+  letter-spacing:0.03em;margin-bottom:4px;
+}
+.reason-desc{font-size:12px;color:#444;line-height:1.6;}
+
+/* SOCIALS */
+.socials-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  background:#1a1a1a;
+}
+.social-item{
+  background:var(--near-black);
+  padding:20px 18px;
+  text-decoration:none;
+  display:flex;flex-direction:column;gap:4px;
+  transition:background 0.2s;
+}
+.social-item:hover{background:#111;}
+.social-item:hover .social-name{color:var(--blue);}
+.social-platform{
+  font-family:'Space Mono',monospace;
+  font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:#333;
+}
+.social-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:16px;text-transform:uppercase;
+  color:var(--white);transition:color 0.2s;letter-spacing:0.03em;
+}
+
+/* RIGHT — JASON */
+.jason-col{
+  background:var(--near-black);
+  display:flex;flex-direction:column;
+}
+.jason-photo{
+  width:100%;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  position:relative;
+  flex-shrink:0;
+}
+.jason-photo img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  filter:grayscale(15%);
+}
+.jason-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 50%,var(--near-black) 100%);
+}
+.jason-bio{
+  padding:40px 44px 56px;
+  flex:1;
+}
+.jason-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:40px;text-transform:uppercase;
+  line-height:0.95;margin-bottom:6px;
+}
+.jason-name span{color:var(--blue);}
+.jason-title{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:#333;margin-bottom:24px;display:block;
+}
+.jason-text{font-size:14px;color:#555;line-height:1.8;margin-bottom:16px;}
+.jason-text:last-child{margin-bottom:0;}
+
+/* FOOTER */
+footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;}
+.footer-inner{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;
+  margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid #1a1a1a;
+}
+.footer-brand{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:36px;
+  text-transform:uppercase;color:transparent;-webkit-text-stroke:2px #2a2a2a;
+  line-height:1;margin-bottom:16px;
+}
+.footer-tagline{font-size:13px;color:#444;line-height:1.7;max-width:280px;}
+.footer-col h4{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;color:#444;margin-bottom:20px;
+}
+.footer-col a{
+  display:block;font-size:14px;color:#555;text-decoration:none;
+  margin-bottom:10px;transition:color 0.2s;
+}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.footer-legal{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#333;text-transform:uppercase;}
+.footer-socials{display:flex;gap:20px;}
+.footer-socials a{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;
+}
+.footer-socials a:hover{color:var(--white);}
+
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .contact-info{border-right:none;border-bottom:1px solid #1a1a1a;padding:48px 32px;}
+  .jason-col{order:-1;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:600px){
+  nav{padding:16px 24px;}
+  .nav-links,.nav-cta{display:none;}
+  .page-header{padding:110px 24px 56px;}
+  .contact-info{padding:48px 24px;}
+  .jason-bio{padding:32px 24px 48px;}
+  .socials-grid{grid-template-columns:1fr;}
+  footer{padding:48px 24px 32px;}
+  .footer-inner{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get In Touch</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-glow"></div>
+  <div class="page-header-eyebrow">CDF Music Group</div>
+  <h1>Let's<br><span class="outline">Talk.</span></h1>
+  <p class="page-header-sub">Sponsorship inquiries, artist questions, or just want to know more about what we do. Reach out directly and we will get back to you.</p>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- LEFT -->
+  <div class="contact-info">
+
+    <div>
+      <span class="section-label">Direct Contact</span>
+      <div class="contact-heading">Reach Us<br>Directly</div>
+      <div class="contact-block">
+        <a href="mailto:info@cdfmusicgroup.com" class="contact-row">
+          <span class="contact-row-label">Email</span>
+          <span class="contact-row-value">info@cdfmusicgroup.com</span>
+        </a>
+        <a href="http://www.cdfmusicgroup.com" target="_blank" class="contact-row">
+          <span class="contact-row-label">Website</span>
+          <span class="contact-row-value">cdfmusicgroup.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <span class="section-label">What To Reach Out About</span>
+      <div class="contact-heading">We're Here<br>For All Of It</div>
+      <div class="reasons">
+        <div class="reason">
+          <div class="reason-title" style="color:var(--blue);">Sponsorship</div>
+          <div class="reason-desc">Interested in partnering with CDF? Tell us about your brand and what you are looking for. No rate card required to start the conversation.</div>
+        </div>
+        <div class="reason">
+          <div class="reason-title" style="color:var(--purple);">Artist Inquiries</div>
+          <div class="reason-desc">Questions about the session format, what to expect, or whether CDF is right for you. Ask before you apply.</div>
+        </div>
+        <div class="reason">
+          <div class="reason-title" style="color:var(--amber);">Press and Media</div>
+          <div class="reason-desc">Writing about CDF or wanting to cover an artist we have featured? Get in touch directly.</div>
+        </div>
+        <div class="reason">
+          <div class="reason-title" style="color:var(--pink);">Everything Else</div>
+          <div class="reason-desc">If it does not fit a box, reach out anyway. We read everything.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <span class="section-label">Follow Along</span>
+      <div class="contact-heading">Find Us<br>Everywhere</div>
+      <div class="socials-grid">
+        <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank" class="social-item">
+          <span class="social-platform">Video</span>
+          <span class="social-name">YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/cdfmusicgroup" target="_blank" class="social-item">
+          <span class="social-platform">Photos &amp; Reels</span>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank" class="social-item">
+          <span class="social-platform">Community</span>
+          <span class="social-name">Facebook</span>
+        </a>
+        <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank" class="social-item">
+          <span class="social-platform">Short Form</span>
+          <span class="social-name">TikTok</span>
+        </a>
+        <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank" class="social-item">
+          <span class="social-platform">Podcast</span>
+          <span class="social-name">Spotify</span>
+        </a>
+        <a href="https://podcasts.apple.com/us/podcast/jam-w-jason/id1857140709" target="_blank" class="social-item">
+          <span class="social-platform">Podcast</span>
+          <span class="social-name">Apple Podcasts</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT — JASON -->
+  <div class="jason-col">
+    <div class="jason-photo">
+      <img src="headshot.png" alt="Jason Mlakar — Founder and Creative Director, CDF Music Group">
+      <div class="jason-photo-overlay"></div>
+    </div>
+    <div class="jason-bio">
+      <div class="jason-name">Jason <span>Mlakar</span></div>
+      <span class="jason-title">Founder &amp; Creative Director &nbsp;&middot;&nbsp; CDF Music Group</span>
+      <p class="jason-text">CDF Music Group is a one-person operation built by a musician who wanted to give original artists a platform that takes their work seriously. Every session, every interview, every piece of content comes through Jason directly.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">CDF</div>
+      <div class="footer-tagline">Independent live music content platform. Original artists only.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="sessions.html">Sessions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="submit.html">Artist Submission</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a>
+      <a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; Jason Mlakar &middot; All Rights Reserved</div>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a>
+      <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

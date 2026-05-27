@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorship — CDF Music Group</title>
+<meta name="description" content="Partner with CDF Music Group. Reach an audience of original artists, musicians, and live music fans across YouTube, Instagram, Facebook, and TikTok.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#0a0a0a;
+  --near-black:#111111;
+  --dark:#1a1a1a;
+  --white:#ffffff;
+  --muted:#888888;
+  --blue:#2D8FFF;
+  --purple:#9B5CFF;
+  --amber:#C96C1A;
+  --pink:#FF3DAE;
+  --red:#E82424;
+  --green:#3ecf8e;
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:'Barlow',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 48px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1e1e1e;
+}
+.nav-logo{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:22px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--white);text-decoration:none;
+}
+.nav-logo span{color:var(--blue);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white);}
+.nav-cta{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--black);background:var(--white);
+  padding:9px 20px;text-decoration:none;transition:background 0.2s,color 0.2s;
+}
+.nav-cta:hover{background:var(--blue);color:var(--white);}
+
+/* PAGE HEADER */
+.page-header{
+  padding:140px 48px 80px;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid #1a1a1a;
+}
+.page-header-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,#050510 0%,#0a0a18 40%,#0a0a0a 100%);
+}
+.page-header-glow{
+  position:absolute;top:-80px;right:-80px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(45,143,255,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.page-header-eyebrow{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:16px;position:relative;z-index:1;
+}
+.page-header h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(56px,8vw,110px);
+  text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;
+  position:relative;z-index:1;
+}
+.page-header h1 .outline{color:transparent;-webkit-text-stroke:2px #2a2a2a;}
+.page-header-sub{
+  font-size:15px;font-weight:300;color:#555;
+  max-width:520px;margin-top:24px;line-height:1.8;
+  position:relative;z-index:1;
+}
+
+/* WHO SECTION */
+.who{
+  padding:100px 48px;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;
+  border-bottom:1px solid #1a1a1a;
+  align-items:start;
+}
+.section-label{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:12px;
+  display:flex;align-items:center;gap:16px;
+}
+.section-label::after{content:'';flex:0 0 40px;height:1px;background:var(--blue);}
+h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(36px,4vw,60px);
+  text-transform:uppercase;line-height:0.95;margin-bottom:28px;
+}
+.body-text{font-size:15px;color:#666;line-height:1.8;margin-bottom:20px;max-width:520px;}
+.body-text:last-child{margin-bottom:0;}
+.body-text strong{color:var(--white);font-weight:500;}
+
+.audience-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  background:#1a1a1a;
+}
+.audience-item{
+  background:var(--near-black);
+  padding:24px 22px;
+  transition:background 0.2s;
+}
+.audience-item:hover{background:#161616;}
+.audience-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:16px;text-transform:uppercase;
+  letter-spacing:0.05em;margin-bottom:6px;
+}
+.audience-desc{font-size:13px;color:#555;line-height:1.6;}
+
+/* WHAT YOU GET */
+.what{
+  background:var(--near-black);
+  padding:100px 48px;
+  border-bottom:1px solid #1a1a1a;
+}
+.what h2 span{color:var(--blue);}
+.what-intro{font-size:15px;color:#555;max-width:560px;line-height:1.8;margin-bottom:56px;}
+.what-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+  background:#1a1a1a;
+}
+.what-item{
+  background:var(--near-black);
+  padding:32px 28px;
+  border-top:3px solid transparent;
+  transition:border-color 0.2s,background 0.2s;
+}
+.what-item:hover{background:#111;border-top-color:var(--blue);}
+.what-num{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:#2a2a2a;margin-bottom:16px;
+}
+.what-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:20px;text-transform:uppercase;
+  letter-spacing:0.03em;margin-bottom:10px;color:var(--white);
+}
+.what-desc{font-size:13px;color:#555;line-height:1.7;}
+
+/* FORMATS */
+.formats{
+  padding:100px 48px;
+  border-bottom:1px solid #1a1a1a;
+}
+.formats h2 span{color:transparent;-webkit-text-stroke:2px #2a2a2a;}
+.formats-intro{font-size:15px;color:#555;max-width:520px;line-height:1.8;margin-bottom:56px;}
+.formats-list{display:flex;flex-direction:column;gap:2px;}
+.format-row{
+  display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;
+  padding:28px 32px;
+  background:var(--near-black);
+  border-left:3px solid transparent;
+  transition:border-color 0.2s,background 0.2s;
+  cursor:default;
+}
+.format-row:hover{background:#111;border-left-color:var(--blue);}
+.format-num{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.15em;color:#2a2a2a;
+  text-transform:uppercase;min-width:52px;
+}
+.format-info{}
+.format-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:22px;text-transform:uppercase;
+  letter-spacing:0.03em;color:var(--white);margin-bottom:4px;
+}
+.format-desc{font-size:13px;color:#555;line-height:1.5;max-width:560px;}
+.format-note{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.1em;text-transform:uppercase;
+  color:#2a2a2a;text-align:right;white-space:nowrap;
+}
+
+/* PODCAST MENTION */
+.podcast-mention{
+  background:var(--near-black);
+  padding:60px 48px;
+  border-bottom:1px solid #1a1a1a;
+  display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;
+}
+.podcast-mention h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(28px,3vw,44px);
+  text-transform:uppercase;line-height:0.95;margin-bottom:12px;
+}
+.podcast-mention p{font-size:14px;color:#555;max-width:480px;line-height:1.7;}
+
+/* CTA */
+.cta-section{
+  background:var(--white);color:var(--black);
+  padding:100px 48px;
+}
+.cta-section h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(44px,5vw,80px);
+  text-transform:uppercase;line-height:0.9;color:var(--black);margin-bottom:20px;
+}
+.cta-section h2 span{color:var(--blue);}
+.cta-section p{font-size:15px;color:#888;max-width:480px;line-height:1.8;margin-bottom:40px;}
+.cta-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-dark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--white);background:var(--black);
+  padding:16px 36px;text-decoration:none;
+  transition:background 0.2s,transform 0.15s;display:inline-block;
+}
+.btn-dark:hover{background:var(--blue);transform:translateY(-2px);}
+.btn-outline-dark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;
+  color:#888;border:1px solid #ccc;
+  padding:16px 36px;text-decoration:none;
+  transition:border-color 0.2s,color 0.2s,transform 0.15s;display:inline-block;
+}
+.btn-outline-dark:hover{border-color:var(--black);color:var(--black);transform:translateY(-2px);}
+
+/* SUPPORTERS */
+.supporters{
+  padding:60px 48px;
+  border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;
+}
+.supporters-label{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:#333;text-align:center;margin-bottom:32px;display:block;
+}
+.supporters-row{
+  display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap;
+}
+.supporter-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:22px;text-transform:uppercase;
+  color:#2a2a2a;transition:color 0.2s;cursor:default;
+}
+.supporter-name:hover{color:var(--white);}
+
+/* FOOTER */
+footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;}
+.footer-inner{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;
+  margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid #1a1a1a;
+}
+.footer-brand{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:36px;
+  text-transform:uppercase;color:transparent;-webkit-text-stroke:2px #2a2a2a;
+  line-height:1;margin-bottom:16px;
+}
+.footer-tagline{font-size:13px;color:#444;line-height:1.7;max-width:280px;}
+.footer-col h4{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;color:#444;margin-bottom:20px;
+}
+.footer-col a{
+  display:block;font-size:14px;color:#555;text-decoration:none;
+  margin-bottom:10px;transition:color 0.2s;
+}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.footer-legal{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#333;text-transform:uppercase;}
+.footer-socials{display:flex;gap:20px;}
+.footer-socials a{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;
+}
+.footer-socials a:hover{color:var(--white);}
+
+@media(max-width:900px){
+  .who{grid-template-columns:1fr;gap:48px;}
+  .what-grid{grid-template-columns:1fr 1fr;}
+  .format-row{grid-template-columns:1fr;gap:8px;}
+  .format-num,.format-note{display:none;}
+  .podcast-mention{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:600px){
+  nav{padding:16px 24px;}
+  .nav-links,.nav-cta{display:none;}
+  .page-header,.who,.what,.formats,.cta-section{padding:60px 24px;}
+  .podcast-mention,.supporters{padding:48px 24px;}
+  .what-grid{grid-template-columns:1fr;}
+  .audience-grid{grid-template-columns:1fr;}
+  .cta-actions{flex-direction:column;}
+  footer{padding:48px 24px 32px;}
+  .footer-inner{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center;}
+  .supporters-row{gap:28px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html" class="active">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Get In Touch</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-glow"></div>
+  <div class="page-header-eyebrow">Partnerships &amp; Sponsorship</div>
+  <h1>Put Your<br><span class="outline">Brand</span><br>In The Room.</h1>
+  <p class="page-header-sub">CDF Music Group works with brands that belong in a room with original artists and the people who love them. If that sounds like you, let's talk.</p>
+</div>
+
+<!-- WHO WATCHES -->
+<section class="who">
+  <div>
+    <div class="section-label">The Audience</div>
+    <h2>Who's<br>Watching</h2>
+    <p class="body-text">CDF's audience is not passive. These are people who follow artists, attend live shows, seek out original music, and care deeply about the craft. They subscribe, share, and show up.</p>
+    <p class="body-text">They are musicians, singer-songwriters, and serious music fans. <strong>The kind of people who notice what's in the room</strong> on the desk, on the mic stand, on the shelf behind the artist.</p>
+  </div>
+  <div>
+    <div class="audience-grid">
+      <div class="audience-item">
+        <div class="audience-title" style="color:var(--blue);">Musicians</div>
+        <div class="audience-desc">Active artists who write, record, and perform their own music. They research gear, tools, and services.</div>
+      </div>
+      <div class="audience-item">
+        <div class="audience-title" style="color:var(--purple);">Music Fans</div>
+        <div class="audience-desc">People who follow independent artists and seek out content that goes deeper than a highlight reel.</div>
+      </div>
+      <div class="audience-item">
+        <div class="audience-title" style="color:var(--amber);">Midwest Core</div>
+        <div class="audience-desc">Strong regional audience across Illinois, Wisconsin, and Chicago with national and global reach.</div>
+      </div>
+      <div class="audience-item">
+        <div class="audience-title" style="color:var(--pink);">Multi-Platform</div>
+        <div class="audience-desc">Reached across YouTube, Instagram, Facebook, TikTok, and podcast platforms simultaneously.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="what">
+  <div class="section-label">What Partnership Looks Like</div>
+  <h2>What You <span>Get</span></h2>
+  <p class="what-intro">Every partnership is different and built around what makes sense for your brand. Here's what CDF brings to the table across any arrangement.</p>
+  <div class="what-grid">
+    <div class="what-item">
+      <div class="what-num">01</div>
+      <div class="what-title">Video Placement</div>
+      <div class="what-desc">Logo, verbal mention, or full title sponsorship on long-form studio sessions distributed across all four platforms.</div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">02</div>
+      <div class="what-title">Short-Form Content</div>
+      <div class="what-desc">Clips from sessions distributed as Reels, Shorts, and TikToks carrying your brand into the highest-discovery formats.</div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">03</div>
+      <div class="what-title">Podcast Integration</div>
+      <div class="what-desc">Jam w/ Jason interviews are pushed to Spotify, Apple Podcasts, and all major streaming platforms. Your brand reaches listeners too.</div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">04</div>
+      <div class="what-title">Description Links</div>
+      <div class="what-desc">Your link and brand description in every video description across all platforms for the life of the content.</div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">05</div>
+      <div class="what-title">Social Tags</div>
+      <div class="what-desc">Tagged and collaboration-credited on all posts across YouTube, Instagram, Facebook, and TikTok at publish.</div>
+    </div>
+    <div class="what-item">
+      <div class="what-num">06</div>
+      <div class="what-title">Authentic Context</div>
+      <div class="what-desc">Your brand lives inside real content, not an ad slot. CDF's audience notices what's in the room because they care about what's in the room.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION BAND -->
+<div style="background:var(--white);color:var(--black);padding:72px 48px;border-bottom:1px solid #e0e0e0;">
+  <div style="max-width:800px;">
+    <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#888;margin-bottom:20px;display:flex;align-items:center;gap:16px;">
+      Why It Matters <span style="display:inline-block;width:40px;height:1px;background:#ccc;"></span>
+    </div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(32px,4vw,58px);text-transform:uppercase;line-height:0.95;color:var(--black);margin-bottom:24px;">
+      100% Of Every Sponsorship<br><span style="color:var(--blue);">Goes Back Into The Platform.</span>
+    </div>
+    <p style="font-size:16px;color:#666;line-height:1.8;max-width:600px;">When you partner with CDF, your dollars are not going to overhead or profit. Every sponsorship is reinvested directly into the platform: better production, more sessions, wider distribution, and more exposure for the independent artists who deserve it. Supporting CDF means supporting the artists on screen.</p>
+  </div>
+</div>
+
+<!-- FORMATS -->
+<section class="formats">
+  <div class="section-label">Partnership Formats</div>
+  <h2>Ways To <span>Work Together</span></h2>
+  <p class="formats-intro">Every arrangement is custom. The formats below are starting points. Reach out and we'll find what fits.</p>
+  <div class="formats-list">
+    <div class="format-row">
+      <div class="format-num">01</div>
+      <div class="format-info">
+        <div class="format-title">Logo Placement</div>
+        <div class="format-desc">Your logo featured as "Presented by" at the intro of a long-form session or interview. Brand visibility at the top of the content with no spoken read required.</div>
+      </div>
+      <div class="format-note">Per Video</div>
+    </div>
+    <div class="format-row">
+      <div class="format-num">02</div>
+      <div class="format-info">
+        <div class="format-title">Spoken Integration</div>
+        <div class="format-desc">A live spoken read at the top of a session introducing your brand. Natural, direct to camera, and authentic to the CDF format. Script guidance provided.</div>
+      </div>
+      <div class="format-note">Per Video</div>
+    </div>
+    <div class="format-row">
+      <div class="format-num">03</div>
+      <div class="format-info">
+        <div class="format-title">Title Sponsorship</div>
+        <div class="format-desc">Full title sponsorship of a long-form artist performance plus short-form clips distributed across all platforms. Maximum exposure from a single session.</div>
+      </div>
+      <div class="format-note">Per Session</div>
+    </div>
+    <div class="format-row">
+      <div class="format-num">04</div>
+      <div class="format-info">
+        <div class="format-title">Ongoing Partnership</div>
+        <div class="format-desc">A sustained presence across multiple sessions and content releases over time. Built around your goals and the natural rhythm of the CDF content calendar.</div>
+      </div>
+      <div class="format-note">Custom</div>
+    </div>
+  </div>
+</section>
+
+<!-- PODCAST MENTION -->
+<div class="podcast-mention">
+  <div>
+    <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#1DB954;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#1DB954;display:inline-block;"></span>
+      Also on Podcast
+    </div>
+    <h3>Jam w/ Jason reaches listeners too.</h3>
+    <p>Every interview is distributed to Spotify, Apple Podcasts, and all major streaming platforms. Sponsorship can extend to the podcast and your brand reaches the same audience wherever they listen.</p>
+  </div>
+  <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank" style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:#1DB954;padding:14px 28px;text-decoration:none;white-space:nowrap;transition:opacity 0.2s;align-self:center;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Listen on Spotify</a>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Let's Find<br>What <span>Fits.</span></h2>
+  <p>No rate card, no package picker. Just reach out, tell us about your brand, and we'll have a real conversation about what makes sense.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn-dark">Get In Touch</a>
+    <a href="about.html" class="btn-outline-dark">Learn About CDF</a>
+  </div>
+</section>
+
+<!-- SUPPORTERS -->
+<div class="supporters">
+  <span class="supporters-label">Current Supporters</span>
+  <div class="supporters-row">
+    <span class="supporter-name">Shure</span>
+    <span style="color:#1e1e1e;">&middot;</span>
+    <span class="supporter-name">Howler Brothers</span>
+    <span style="color:#1e1e1e;">&middot;</span>
+    <span class="supporter-name">Thalia Capos</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">CDF</div>
+      <div class="footer-tagline">Independent live music content platform. Original artists only.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="sessions.html">Sessions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="submit.html">Artist Submission</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a>
+      <a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; Jason Mlakar &middot; All Rights Reserved</div>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a>
+      <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

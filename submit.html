@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist Submission — CDF Music Group</title>
+<meta name="description" content="Apply for a CDF Music Group session. Original artists only. Studio sessions in rural NW Illinois and remote interviews available.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#0a0a0a;
+  --near-black:#111111;
+  --dark:#1a1a1a;
+  --white:#ffffff;
+  --muted:#888888;
+  --blue:#2D8FFF;
+  --purple:#9B5CFF;
+  --amber:#C96C1A;
+  --pink:#FF3DAE;
+  --green:#3ecf8e;
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:'Barlow',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 48px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1e1e1e;
+}
+.nav-logo{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:22px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--white);text-decoration:none;
+}
+.nav-logo span{color:var(--blue);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--white);}
+.nav-cta{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--black);background:var(--white);
+  padding:9px 20px;text-decoration:none;transition:background 0.2s,color 0.2s;
+}
+.nav-cta:hover{background:var(--blue);color:var(--white);}
+
+/* PAGE HEADER */
+.page-header{
+  padding:140px 48px 80px;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid #1a1a1a;
+}
+.page-header-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,#050510 0%,#0a0a18 40%,#0a0a0a 100%);
+}
+.page-header-glow{
+  position:absolute;top:-80px;right:-80px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(45,143,255,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.page-header-eyebrow{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:16px;position:relative;z-index:1;
+}
+.page-header h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(56px,8vw,110px);
+  text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;
+  position:relative;z-index:1;
+}
+.page-header h1 .outline{color:transparent;-webkit-text-stroke:2px #2a2a2a;}
+.page-header h1 .accent{color:var(--blue);}
+.page-header-sub{
+  font-size:15px;font-weight:300;color:#555;
+  max-width:520px;margin-top:24px;line-height:1.8;
+  position:relative;z-index:1;
+}
+
+/* MAIN LAYOUT */
+.main{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:600px;
+}
+
+/* LEFT — INFO */
+.info{
+  padding:72px 56px;
+  border-right:1px solid #1a1a1a;
+  display:flex;flex-direction:column;gap:48px;
+}
+.info-section-label{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:12px;
+}
+.info h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:36px;text-transform:uppercase;
+  line-height:0.95;margin-bottom:16px;
+}
+.info p{font-size:14px;color:#555;line-height:1.8;margin-bottom:12px;}
+.info p:last-child{margin-bottom:0;}
+.info strong{color:var(--white);font-weight:500;}
+
+.rules{display:flex;flex-direction:column;gap:2px;}
+.rule-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 18px;
+  background:var(--near-black);
+  border-left:3px solid transparent;
+  transition:border-color 0.2s;
+}
+.rule-item:hover{border-left-color:var(--blue);}
+.rule-dot{
+  width:6px;height:6px;border-radius:50%;
+  flex-shrink:0;margin-top:5px;
+}
+.rule-text{font-size:13px;color:#555;line-height:1.6;}
+.rule-text strong{color:var(--white);font-weight:500;}
+
+.formats-list{display:flex;flex-direction:column;gap:2px;}
+.format-option{
+  padding:20px 18px;
+  background:var(--near-black);
+  border-left:3px solid transparent;
+  transition:border-color 0.2s,background 0.2s;
+}
+.format-option:hover{background:#111;border-left-color:var(--blue);}
+.format-option-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:18px;text-transform:uppercase;
+  letter-spacing:0.03em;margin-bottom:4px;
+}
+.format-option-desc{font-size:12px;color:#444;line-height:1.6;}
+
+/* RIGHT — FORM */
+.form-col{
+  padding:72px 56px;
+  background:var(--near-black);
+}
+.form-label{
+  font-family:'Space Mono',monospace;
+  font-size:9px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:12px;display:block;
+}
+.form-heading{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:32px;text-transform:uppercase;
+  line-height:0.95;margin-bottom:32px;
+}
+
+/* HUBSPOT EMBED CONTAINER */
+.hubspot-embed{
+  width:100%;
+}
+
+/* HubSpot overrides — keeps form on brand */
+.hubspot-embed .hs-form fieldset{max-width:100% !important;}
+.hubspot-embed .hs-input{
+  width:100% !important;
+  background:#1a1a1a !important;
+  border:1px solid #2a2a2a !important;
+  color:var(--white) !important;
+  border-radius:0 !important;
+  padding:12px 14px !important;
+  font-family:'Barlow',sans-serif !important;
+  font-size:14px !important;
+}
+.hubspot-embed .hs-input:focus{
+  border-color:var(--blue) !important;
+  outline:none !important;
+}
+.hubspot-embed .hs-button{
+  background:var(--white) !important;
+  color:var(--black) !important;
+  border:none !important;
+  border-radius:0 !important;
+  font-family:'Barlow Condensed',sans-serif !important;
+  font-weight:700 !important;
+  font-size:13px !important;
+  letter-spacing:3px !important;
+  text-transform:uppercase !important;
+  padding:14px 32px !important;
+  cursor:pointer !important;
+  transition:background 0.2s !important;
+}
+.hubspot-embed .hs-button:hover{
+  background:var(--blue) !important;
+  color:var(--white) !important;
+}
+.hubspot-embed .hs-form-field label{
+  font-family:'Space Mono',monospace !important;
+  font-size:9px !important;
+  letter-spacing:0.15em !important;
+  text-transform:uppercase !important;
+  color:var(--muted) !important;
+  margin-bottom:6px !important;
+  display:block !important;
+}
+
+/* FOOTER */
+footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;}
+.footer-inner{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;
+  margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid #1a1a1a;
+}
+.footer-brand{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:36px;
+  text-transform:uppercase;color:transparent;-webkit-text-stroke:2px #2a2a2a;
+  line-height:1;margin-bottom:16px;
+}
+.footer-tagline{font-size:13px;color:#444;line-height:1.7;max-width:280px;}
+.footer-col h4{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;color:#444;margin-bottom:20px;
+}
+.footer-col a{
+  display:block;font-size:14px;color:#555;text-decoration:none;
+  margin-bottom:10px;transition:color 0.2s;
+}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.footer-legal{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#333;text-transform:uppercase;}
+.footer-socials{display:flex;gap:20px;}
+.footer-socials a{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;
+}
+.footer-socials a:hover{color:var(--white);}
+
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .info{border-right:none;border-bottom:1px solid #1a1a1a;padding:48px 32px;}
+  .form-col{padding:48px 32px;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
+}
+@media(max-width:600px){
+  nav{padding:16px 24px;}
+  .nav-links,.nav-cta{display:none;}
+  .page-header{padding:110px 24px 56px;}
+  .info,.form-col{padding:48px 24px;}
+  footer{padding:48px 24px 32px;}
+  .footer-inner{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html" class="active">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Partner With Us</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-glow"></div>
+  <div class="page-header-eyebrow">Original Artists Only</div>
+  <h1>Apply For<br><span class="outline">A</span> <span class="accent">Session.</span></h1>
+  <p class="page-header-sub">CDF features original artists only. If you write and perform your own music and want a platform that treats your work seriously, we want to hear from you.</p>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- LEFT INFO -->
+  <div class="info">
+
+    <div>
+      <div class="info-section-label">Before You Apply</div>
+      <h2>What To Know</h2>
+      <p>CDF Music Group features <strong>original artists only.</strong> No cover artists, no tribute acts. If your set includes originals alongside covers we are still interested, but the session itself will focus on your original material.</p>
+      <p>Sessions are filmed in rural NW Illinois. Remote interviews are available for artists who cannot make the trip. Both formats receive the same production care and distribution.</p>
+    </div>
+
+    <div>
+      <div class="info-section-label">The Rules</div>
+      <h2>What We Look For</h2>
+      <div class="rules">
+        <div class="rule-item">
+          <div class="rule-dot" style="background:var(--blue);"></div>
+          <div class="rule-text"><strong>Original music.</strong> You write and perform your own songs. This is the only hard requirement.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-dot" style="background:var(--purple);"></div>
+          <div class="rule-text"><strong>A story worth telling.</strong> Every artist has one. We want to hear yours.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-dot" style="background:var(--amber);"></div>
+          <div class="rule-text"><strong>Willingness to be on camera.</strong> Sessions are filmed. Interviews are filmed. That is the format.</div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-dot" style="background:var(--pink);"></div>
+          <div class="rule-text"><strong>Genre is open.</strong> Country, folk, blues, rock, Americana, indie, singer-songwriter. If it is original, we are interested.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="info-section-label">Session Formats</div>
+      <h2>How It Works</h2>
+      <div class="formats-list">
+        <div class="format-option">
+          <div class="format-option-title" style="color:var(--blue);">In Studio</div>
+          <div class="format-option-desc">Come to the studio in rural NW Illinois. Perform live, sit down for the interview, and leave knowing it is captured properly. Full production on our end.</div>
+        </div>
+        <div class="format-option">
+          <div class="format-option-title" style="color:var(--purple);">Remote Interview</div>
+          <div class="format-option-desc">Can't make the trip? We conduct remote interviews via Riverside.fm. You need a decent mic, a quiet space, and a solid internet connection. We handle the rest.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="form-col">
+    <span class="form-label">Artist Application</span>
+    <div class="form-heading">Tell Us About<br>Your Music</div>
+
+    <!-- ============================================
+         PASTE YOUR HUBSPOT EMBED CODE BELOW HERE
+         Replace this comment block with the script
+         tag and form embed from your HubSpot account.
+         Go to: HubSpot > Marketing > Forms > Share > Embed Code
+         ============================================ -->
+
+    <div class="hubspot-embed" id="hubspot-form-container">
+      <script src="https://js-na2.hsforms.net/forms/embed/245925121.js" defer></script>
+      <div class="hs-form-frame" data-region="na2" data-form-id="98f6ae2f-5ad2-4c93-aee5-06a4b2504c0f" data-portal-id="245925121"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">CDF</div>
+      <div class="footer-tagline">Independent live music content platform. Original artists only.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="sessions.html">Sessions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="submit.html">Artist Submission</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a>
+      <a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; Jason Mlakar &middot; All Rights Reserved</div>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a>
+      <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
