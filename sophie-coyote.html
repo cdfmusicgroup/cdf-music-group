@@ -169,7 +169,7 @@ h2{
   text-transform:uppercase;line-height:0.95;margin-bottom:40px;
 }
 .video-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:2px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
 }
 .video-card{background:var(--dark);}
 .video-embed{
@@ -315,7 +315,7 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
 
 @media(max-width:900px){
   .bio{grid-template-columns:1fr;gap:48px;}
-  .video-grid{grid-template-columns:1fr;}
+  .video-grid{grid-template-columns:1fr 1fr;}
   .interview-inner{grid-template-columns:1fr;gap:32px;}
   .more-grid{grid-template-columns:1fr 1fr;}
   .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
@@ -324,7 +324,8 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
   nav{padding:16px 24px;}
   .nav-links,.nav-cta{display:none;}
   .hero{padding:0 24px 56px;}
-  .bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}
+  .video-grid{grid-template-columns:1fr;}
+  .bio,.performances,.spotify-section,.more{padding:60px 24px;}
   .back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}
   .more-grid{grid-template-columns:1fr;}
   footer{padding:48px 24px 32px;}
@@ -354,14 +355,14 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
   <div class="hero-overlay"></div>
   <div class="hero-accent-bar"></div>
   <div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
-  <h1 class="hero-name">Ivy Ford</h1>
+  <h1 class="hero-name">Sophie Coyote</h1>
   <div class="hero-genre">Indie Folk</div>
   <div class="hero-tags">
-    <span class="hero-tag">Chicago, IL</span>
-    <span class="hero-tag">Blues</span>
-    <span class="hero-tag">Soul</span>
-    <span class="hero-tag">R&amp;B</span>
-    <span class="hero-tag">Multi-Instrumentalist</span>
+    <span class="hero-tag">Waddams Grove, IL</span>
+    <span class="hero-tag">Folk</span>
+    <span class="hero-tag">Indie</span>
+    <span class="hero-tag">Americana</span>
+    <span class="hero-tag">Singer-Songwriter</span>
   </div>
 </section>
 
@@ -377,7 +378,7 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
   <div class="bio-aside">
     <div class="bio-fact">
       <div class="bio-fact-title">The CDF Session</div>
-      <div class="bio-fact-desc">"Forget Me Nots" performed live in the CDF studio. One of the more intimate and carefully crafted sessions on the platform.</div>
+      <div class="bio-fact-desc">Sophie performed three original songs live in the CDF studio — "Forget Me Nots," "Damn She's Fine," and "Fair To Me." One of the most intimate and beautifully crafted multi-song sessions on the platform.</div>
     </div>
     <div class="bio-fact">
       <div class="bio-fact-title">WNIJ Studio A</div>
@@ -401,27 +402,29 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
   <div class="video-grid">
     <div class="video-card">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/SwuvdcMu_LI" title="Sophie Coyote Live Session at CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/SwuvdcMu_LI" title="Sophie Coyote — Forget Me Nots | CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="video-info">
-        <div class="video-title">"Forget Me Nots" — Live Session</div>
-        <div class="video-meta">Indie Folk &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
+        <div class="video-title">"Forget Me Nots" &#8212; CDF Music Group</div>
+        <div class="video-meta">Folk / Indie &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- INTERVIEW -->
-<section class="interview">
-  <div class="section-label">Jam w/ Jason</div>
-  <h2>The<br><span style="color:var(--accent);">Interview</span></h2>
-  <div class="interview-inner">
-    <div>
-      <p class="interview-recap">Jason and Sophie talk through her upbringing in rural NW Illinois, the moment she decided to leave her day job and commit to music full-time, her writing process, and what it means to build an audience one honest song at a time. A conversation rooted in the same Midwestern soil as the music itself.</p>
-    </div>
-    <div class="interview-video">
+    <div class="video-card">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/SwuvdcMu_LI" title="Sophie Coyote Interview — Jam w/ Jason on CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/npXg8Yg1NYU" title="Sophie Coyote — Damn She's Fine | CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">"Damn She's Fine" &#8212; CDF Music Group</div>
+        <div class="video-meta">Folk / Indie &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/D0-YDo6quAw" title="Sophie Coyote — Fair To Me | CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">"Fair To Me" &#8212; CDF Music Group</div>
+        <div class="video-meta">Folk / Indie &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
       </div>
     </div>
   </div>
@@ -432,7 +435,7 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
   <div class="section-label">Listen</div>
   <h2>Sophie Coyote<br><span style="color:#1DB954;">On Spotify</span></h2>
   <div class="spotify-embed">
-    <iframe style="border-radius:0" src="https://open.spotify.com/embed/artist/3Z9fKGRYNOEdQITiYJv5nY?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:0" src="https://open.spotify.com/embed/artist/4GzgQfmS72475g4lMAqKw3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </section>
 
@@ -441,31 +444,31 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
   <div class="section-label">More Sessions</div>
   <h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
   <div class="more-grid">
-    <a href="ivy-ford.html" class="more-card">
-      <div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:##0d1a20;"></div>
+    <a href="nathan-dean.html" class="more-card">
+      <div class="more-bg" style="background-image:url('nathan-dean.png');background-size:cover;background-position:center top;background-color:#1a0505;"></div>
       <div class="more-gradient"></div>
-      <div class="more-overlay"></div>
+      <div class="more-overlay" style="background:rgba(192,57,43,0.08);"></div>
       <div class="more-info">
-        <span class="more-artist">Ivy Ford</span>
-        <span class="more-genre" style="color:var(--blue);">Chicago Blues</span>
+        <span class="more-artist">Nathan Dean</span>
+        <span class="more-genre" style="color:#C0392B;">Country Rock</span>
       </div>
     </a>
-    <a href="haley-bundy.html" class="more-card">
-      <div class="more-bg" style="background-image:url('haley-bundy.png');background-size:cover;background-position:center top;background-color:#200d0d;"></div>
+    <a href="eli-parker.html" class="more-card">
+      <div class="more-bg" style="background-image:url('eli-parker.png');background-size:cover;background-position:center top;background-color:#0d1020;"></div>
       <div class="more-gradient"></div>
-      <div class="more-overlay" style="background:rgba(232,36,36,0.08);"></div>
+      <div class="more-overlay" style="background:rgba(45,143,255,0.08);"></div>
       <div class="more-info">
-        <span class="more-artist">Haley Bundy</span>
-        <span class="more-genre" style="color:var(--red);">Nashville Country</span>
+        <span class="more-artist">Eli Parker</span>
+        <span class="more-genre" style="color:#2D8FFF;">Singer-Songwriter</span>
       </div>
     </a>
-    <a href="rachel-neal.html" class="more-card">
-      <div class="more-bg" style="background-image:url('rachel-neal.png');background-size:cover;background-position:center top;background-color:#0d1a0d;"></div>
+    <a href="the-lone-canary.html" class="more-card">
+      <div class="more-bg" style="background-image:url('the-lone-canary.png');background-size:cover;background-position:center top;background-color:#120d1a;"></div>
       <div class="more-gradient"></div>
-      <div class="more-overlay" style="background:rgba(62,207,142,0.07);"></div>
+      <div class="more-overlay" style="background:rgba(142,68,173,0.08);"></div>
       <div class="more-info">
-        <span class="more-artist">Rachel Neal</span>
-        <span class="more-genre" style="color:var(--green);">Country / Americana</span>
+        <span class="more-artist">The Lone Canary</span>
+        <span class="more-genre" style="color:#8E44AD;">Folk / Americana</span>
       </div>
     </a>
   </div>
