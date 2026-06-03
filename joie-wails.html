@@ -3,17 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joie Wails — Folk Soul Singer-Songwriter | CDF Music Group Live Session</title>
-<meta name="description" content="Watch Joie Wails perform live at CDF Music Group. Independent folk and soul singer-songwriter and original artist. Live session and interview from the CDF studio.">
+<title>Joie Wails &#8212; Original Artist | CDF Music Group Live Session</title>
+<meta name="description" content="Watch Joie Wails perform live at CDF Music Group. Original singer-songwriter performing Keep Breathing live in session with interview.">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--black:#0a0a0a;--near-black:#111111;--dark:#1a1a1a;--white:#ffffff;--muted:#888888;--blue:#2D8FFF;--accent:#D4AC0D;}
+:root{
+  --black:#0a0a0a;--near-black:#111111;--dark:#1a1a1a;
+  --white:#ffffff;--muted:#888888;
+  --blue:#2D8FFF;--purple:#9B5CFF;--amber:#C96C1A;
+  --pink:#FF3DAE;--red:#E82424;--green:#3ecf8e;
+  --accent:#D4AC0D;
+}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #1e1e1e;}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 48px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1e1e1e;
+}
 .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--white);text-decoration:none;}
 .nav-logo span{color:var(--blue);}
 .nav-links{display:flex;gap:32px;list-style:none;}
@@ -21,14 +35,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a:hover{color:var(--white);}
 .nav-cta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--white);padding:9px 20px;text-decoration:none;transition:background 0.2s,color 0.2s;}
 .nav-cta:hover{background:var(--blue);color:var(--white);}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:transform 0.3s,opacity 0.3s,width 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 40px 60px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.nav-mobile.open{opacity:1;pointer-events:all;}
+.nav-mobile ul{list-style:none;display:flex;flex-direction:column;gap:0;width:100%;}
+.nav-mobile ul li{border-bottom:1px solid #1a1a1a;}
+.nav-mobile ul li a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(32px,8vw,48px);text-transform:uppercase;letter-spacing:0.02em;color:#333;text-decoration:none;display:block;padding:16px 0;transition:color 0.2s;}
+.nav-mobile ul li a:hover{color:var(--white);}
+.nav-mobile-cta{margin-top:40px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--white);padding:14px 32px;text-decoration:none;display:inline-block;}
+.nav-mobile-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#333;margin-bottom:32px;}
 .hero{min-height:90vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 72px;}
-.hero-bg{position:absolute;inset:0;background-image:url('joie-wails.png');background-size:cover;background-position:center top;filter:brightness(0.5);}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center top;filter:brightness(0.5);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.95) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.2) 100%);}
 .hero-accent-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);}
 .hero-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;position:relative;z-index:1;display:flex;align-items:center;gap:12px;}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--accent);}
-.hero-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(56px,9vw,130px);text-transform:uppercase;line-height:0.88;letter-spacing:-0.02em;position:relative;z-index:1;color:var(--white);}
-.hero-genre{font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.5vw,32px);text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);position:relative;z-index:1;margin-top:8px;}
+.hero-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(64px,9vw,130px);text-transform:uppercase;line-height:0.88;letter-spacing:-0.02em;position:relative;z-index:1;color:var(--white);}
+.hero-genre{font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:clamp(20px,2.5vw,32px);text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);position:relative;z-index:1;margin-top:8px;}
 .hero-tags{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;position:relative;z-index:1;}
 .hero-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:5px 12px;}
 .bio{padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;border-bottom:1px solid #1a1a1a;align-items:start;}
@@ -60,7 +87,7 @@ h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36p
 .interview-video{background:var(--dark);}
 .interview-video .video-embed{aspect-ratio:16/9;}
 .spotify-section{padding:80px 48px;background:var(--near-black);border-bottom:1px solid #1a1a1a;}
-.spotify-embed{margin-top:32px;overflow:hidden;}
+.spotify-embed{margin-top:32px;border-radius:0;overflow:hidden;}
 .more{padding:80px 48px;border-bottom:1px solid #1a1a1a;}
 .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
 .more-card{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--dark);cursor:pointer;text-decoration:none;display:block;transition:transform 0.3s;}
@@ -69,7 +96,7 @@ h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36p
 .more-bg{position:absolute;inset:0;background-size:cover;background-position:center top;transition:transform 0.4s;}
 .more-card:hover .more-bg{transform:scale(1.05);}
 .more-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);}
-.more-overlay{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;background:rgba(45,143,255,0.08);}
+.more-overlay{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;}
 .more-info{position:absolute;bottom:0;left:0;right:0;padding:18px 16px 20px;}
 .more-artist{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;text-transform:uppercase;line-height:0.95;color:var(--white);display:block;}
 .more-genre{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;text-transform:uppercase;display:block;margin-top:3px;}
@@ -90,87 +117,187 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
 .footer-socials a{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;}
 .footer-socials a:hover{color:var(--white);}
 @media(max-width:900px){.bio{grid-template-columns:1fr;gap:48px;}.video-grid{grid-template-columns:1fr;}.interview-inner{grid-template-columns:1fr;gap:32px;}.more-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;gap:32px;}}
-@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
+@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.nav-mobile{display:flex;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
 </style>
 </head>
 <body>
 <nav>
-<a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
-<ul class="nav-links">
-<li><a href="sessions.html">Sessions</a></li>
-<li><a href="podcast.html">Podcast</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="sponsorship.html">Sponsorship</a></li>
-<li><a href="submit.html">Artists</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<a href="contact.html" class="nav-cta">Partner With Us</a>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Partner With Us</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile" id="mobileMenu">
+  <div class="nav-mobile-label">CDF Music Group</div>
+  <ul>
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get In Touch</a>
+</div>
+
 <section class="hero">
-<div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-accent-bar"></div>
-<div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
-<h1 class="hero-name">Joie Wails</h1>
-<div class="hero-genre">Folk / Soul</div>
-<div class="hero-tags"><span class="hero-tag">Folk</span><span class="hero-tag">Soul</span><span class="hero-tag">Singer-Songwriter</span><span class="hero-tag">Original Music</span><span class="hero-tag">Independent</span></div>
+  <div class="hero-bg" style="background-image:url('joie-wails.png');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-bar"></div>
+  <div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
+  <h1 class="hero-name">Joie Wails</h1>
+  <div class="hero-genre">Singer / Songwriter</div>
+  <div class="hero-tags">
+    <span class="hero-tag">Original Music</span>
+    <span class="hero-tag">Singer-Songwriter</span>
+    <span class="hero-tag">CDF Session</span>
+    <span class="hero-tag">Live Performance</span>
+  </div>
 </section>
+
 <section class="bio">
-<div>
-<div class="bio-label">About Joie Wails</div>
-<h2>Folk Soul<br>And Fire</h2>
-<p>Joie Wails is a singer-songwriter whose music lives at the intersection of folk tradition and soul feeling. Her voice is one of the most distinctive in the CDF catalog, warm and powerful with an emotional directness that makes every song feel immediate and real.</p>
-<p>Writing original material that draws from folk, blues, and soul influences, Joie has built a growing audience through live performance and recorded work that never sacrifices honesty for polish. <strong>Her songs feel like they have been lived in</strong>, not just written, and her performances carry that weight.</p>
-<p>Joie Wails came to the CDF studio and delivered a session that is among the most vocally powerful in the platform's history. The kind of performance that stops everything when it comes on.</p>
-</div>
-<div class="bio-aside">
-<div class="bio-fact"><div class="bio-fact-title">The CDF Session</div><div class="bio-fact-desc">Joie Wails delivered one of the most vocally powerful sessions in the CDF catalog. The kind of performance that demands your full attention.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Folk and Soul</div><div class="bio-fact-desc">Her music sits at the intersection of folk tradition and soul feeling, with a voice that carries both with equal conviction.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Original Artist</div><div class="bio-fact-desc">All original material. Every song is Joie's own, written from real experience.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Listen on Spotify</div><div class="bio-fact-desc">Joie Wails's full catalog is available on Spotify and all major streaming platforms.</div></div>
-</div>
+  <div>
+    <div class="bio-label">About Joie Wails</div>
+    <h2>Keep Breathing,<br>Keep Creating</h2>
+    <p>Joie Wails is a singer-songwriter whose music carries weight and purpose. Her song "Keep Breathing" is exactly what the title suggests: a piece of music that holds on, that pushes through, that speaks to something real. Her CDF session is one of the most emotionally present performances in the catalog.</p>
+    <p>Joie writes from a place of honesty and resilience. Her voice is the instrument her songs are built around, and when she performs live there is a directness that makes it impossible to look away. She is an artist who came to CDF with something to say and said it.</p>
+    <p>The Jam w/ Jason interview is one of the more personal conversations in the catalog, covering her creative process, the meaning behind her music, and what keeps her going as an independent artist.</p>
+  </div>
+  <div class="bio-aside">
+    <div class="bio-fact"><div class="bio-fact-title">The CDF Session</div><div class="bio-fact-desc">Joie performed her original song "Keep Breathing" live in the CDF studio and sat down with Jason for a personal and candid conversation about her music and journey.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Keep Breathing</div><div class="bio-fact-desc">A performance defined by emotional honesty and a voice that carries every word with intention. One of the most memorable solo performances in the CDF catalog.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Original Only</div><div class="bio-fact-desc">Every CDF session features original music. Joie Wails came in with her own songs and delivered an unforgettable performance.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Jam w/ Jason</div><div class="bio-fact-desc">The interview goes into Joie's story, her writing process, and what "Keep Breathing" means to her personally and as a piece of music.</div></div>
+  </div>
 </section>
+
 <section class="performances">
-<div class="section-label">Live Performances</div>
-<h2>Watch Joie<br>Perform</h2>
-<div class="video-grid">
-<div class="video-card">
-<div class="video-embed"><iframe src="https://www.youtube.com/embed/PWwlIgFpbyM" title="Joie Wails Live Session at CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-<div class="video-info"><div class="video-title">Live Session — CDF Music Group</div><div class="video-meta">Folk / Soul &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div></div>
-</div>
-</div>
+  <div class="section-label">Live Performance</div>
+  <h2>Watch Joie<br><span style="color:var(--accent);">Perform</span></h2>
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/zpvlHppeuqE" title="Keep Breathing &#8212; CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Keep Breathing &#8212; CDF Music Group</div>
+        <div class="video-meta">Singer-Songwriter &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="interview">
-<div class="section-label">Jam w/ Jason</div>
-<h2>The<br><span style="color:var(--accent);">Interview</span></h2>
-<div class="interview-inner">
-<div><p class="interview-recap">Jason and Joie talk about her roots in folk and soul music, the songwriting process, what drives her to perform original material, and what the music means to her personally. A rich and emotionally honest conversation.</p></div>
-<div class="interview-video"><div class="video-embed"><iframe src="https://www.youtube.com/embed/PWwlIgFpbyM" title="Joie Wails Interview — Jam w/ Jason" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-</div>
+  <div class="section-label">Jam w/ Jason</div>
+  <h2>The<br><span style="color:var(--accent);">Interview</span></h2>
+  <div class="interview-inner">
+    <div>
+      <p class="interview-recap">Jason and Joie sit down for one of the most personal Jam w/ Jason conversations on record. They talk about "Keep Breathing," where it comes from, what it means to put that kind of music out into the world, and what the independent path has looked like for her.</p>
+    </div>
+    <div class="interview-video">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/DN8uhEhVJRo" title="Joie Interview &#8212; Jam w/ Jason on CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="spotify-section">
-<div class="section-label">Listen</div>
-<h2>Joie Wails<br><span style="color:#1DB954;">On Spotify</span></h2>
-<div class="spotify-embed"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/4KEzDXMBXo8kYByA3iBgs3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
-</section>
+
+
 <section class="more">
-<div class="section-label">More Sessions</div>
-<h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
-<div class="more-grid">
-<a href="ivy-ford.html" class="more-card"><div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0d1a20;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Ivy Ford</span><span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span></div></a>
-<a href="rachel-neal.html" class="more-card"><div class="more-bg" style="background-image:url('rachel-neal.png');background-size:cover;background-position:center top;background-color:#0d1a0d;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Rachel Neal</span><span class="more-genre" style="color:#27AE60;">Country / Americana</span></div></a>
-<a href="sophie-coyote.html" class="more-card"><div class="more-bg" style="background-image:url('sophie-coyote.png');background-size:cover;background-position:center top;background-color:#1a0d0a;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Sophie Coyote</span><span class="more-genre" style="color:#E67E22;">Indie Folk</span></div></a>
-</div>
+  <div class="section-label">More Sessions</div>
+  <h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
+  <div class="more-grid">
+    <a href="ivy-ford.html" class="more-card">
+      <div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0d1020;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(45,143,255,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Ivy Ford</span>
+        <span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span>
+      </div>
+    </a>
+    <a href="craig-gerdes.html" class="more-card">
+      <div class="more-bg" style="background-image:url('craig-gerdes.png');background-size:cover;background-position:center top;background-color:#0d0d1a;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(26,82,118,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Craig Gerdes</span>
+        <span class="more-genre" style="color:#1A5276;">Singer-Songwriter</span>
+      </div>
+    </a>
+    <a href="aaron-newsome.html" class="more-card">
+      <div class="more-bg" style="background-image:url('aaron-newsome.png');background-size:cover;background-position:center top;background-color:#0d1020;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(45,143,255,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Aaron Newsome</span>
+        <span class="more-genre" style="color:#2D8FFF;">Singer-Songwriter</span>
+      </div>
+    </a>
+  </div>
 </section>
-<div class="back-band"><h3>See All Sessions</h3><a href="sessions.html" class="btn-white">Full Artist Roster</a></div>
+
+<div class="back-band">
+  <h3>See All Sessions</h3>
+  <a href="sessions.html" class="btn-white">Full Artist Roster</a>
+</div>
+
 <footer>
-<div class="footer-inner">
-<div><div class="footer-brand">CDF</div><div class="footer-tagline">Independent live music content platform. Original artists only.</div></div>
-<div class="footer-col"><h4>Navigation</h4><a href="sessions.html">Sessions</a><a href="podcast.html">Podcast</a><a href="about.html">About</a><a href="sponsorship.html">Sponsorship</a><a href="submit.html">Artist Submission</a><a href="contact.html">Contact</a></div>
-<div class="footer-col"><h4>Contact</h4><a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a><a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a></div>
-</div>
-<div class="footer-bottom">
-<div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
-<div class="footer-socials"><a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a><a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a><a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a><a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a><a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a></div>
-</div>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">CDF</div>
+      <div class="footer-tagline">Independent live music content platform. Original artists only.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="sessions.html">Sessions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="submit.html">Artist Submission</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a>
+      <a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a>
+      <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a>
+    </div>
+  </div>
 </footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
 </body>
 </html>

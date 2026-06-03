@@ -3,17 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eli Parker — Singer-Songwriter | CDF Music Group Live Session</title>
-<meta name="description" content="Watch Eli Parker perform live at CDF Music Group. Independent singer-songwriter and original artist. Live session and interview from the CDF studio.">
+<title>Eli Parker &#8212; Singer-Songwriter | CDF Music Group Live Session</title>
+<meta name="description" content="Watch Eli Parker perform live at CDF Music Group. Original singer-songwriter with a cinematic, introspective sound. Two live performances plus interview.">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--black:#0a0a0a;--near-black:#111111;--dark:#1a1a1a;--white:#ffffff;--muted:#888888;--blue:#2D8FFF;--accent:#5DADE2;}
+:root{
+  --black:#0a0a0a;--near-black:#111111;--dark:#1a1a1a;
+  --white:#ffffff;--muted:#888888;
+  --blue:#2D8FFF;--purple:#9B5CFF;--amber:#C96C1A;
+  --pink:#FF3DAE;--red:#E82424;--green:#3ecf8e;
+  --accent:#2D8FFF;
+}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #1e1e1e;}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 48px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1e1e1e;
+}
 .nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--white);text-decoration:none;}
 .nav-logo span{color:var(--blue);}
 .nav-links{display:flex;gap:32px;list-style:none;}
@@ -21,14 +35,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a:hover{color:var(--white);}
 .nav-cta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--white);padding:9px 20px;text-decoration:none;transition:background 0.2s,color 0.2s;}
 .nav-cta:hover{background:var(--blue);color:var(--white);}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:transform 0.3s,opacity 0.3s,width 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 40px 60px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.nav-mobile.open{opacity:1;pointer-events:all;}
+.nav-mobile ul{list-style:none;display:flex;flex-direction:column;gap:0;width:100%;}
+.nav-mobile ul li{border-bottom:1px solid #1a1a1a;}
+.nav-mobile ul li a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(32px,8vw,48px);text-transform:uppercase;letter-spacing:0.02em;color:#333;text-decoration:none;display:block;padding:16px 0;transition:color 0.2s;}
+.nav-mobile ul li a:hover{color:var(--white);}
+.nav-mobile-cta{margin-top:40px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--white);padding:14px 32px;text-decoration:none;display:inline-block;}
+.nav-mobile-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#333;margin-bottom:32px;}
 .hero{min-height:90vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 72px;}
-.hero-bg{position:absolute;inset:0;background-image:url('eli-parker.png');background-size:cover;background-position:center top;filter:brightness(0.5);}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center top;filter:brightness(0.5);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.95) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.2) 100%);}
 .hero-accent-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);}
 .hero-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;position:relative;z-index:1;display:flex;align-items:center;gap:12px;}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--accent);}
-.hero-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(56px,9vw,130px);text-transform:uppercase;line-height:0.88;letter-spacing:-0.02em;position:relative;z-index:1;color:var(--white);}
-.hero-genre{font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:clamp(18px,2.5vw,32px);text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);position:relative;z-index:1;margin-top:8px;}
+.hero-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(64px,9vw,130px);text-transform:uppercase;line-height:0.88;letter-spacing:-0.02em;position:relative;z-index:1;color:var(--white);}
+.hero-genre{font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:clamp(20px,2.5vw,32px);text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);position:relative;z-index:1;margin-top:8px;}
 .hero-tags{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;position:relative;z-index:1;}
 .hero-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:5px 12px;}
 .bio{padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;border-bottom:1px solid #1a1a1a;align-items:start;}
@@ -60,7 +87,7 @@ h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36p
 .interview-video{background:var(--dark);}
 .interview-video .video-embed{aspect-ratio:16/9;}
 .spotify-section{padding:80px 48px;background:var(--near-black);border-bottom:1px solid #1a1a1a;}
-.spotify-embed{margin-top:32px;overflow:hidden;}
+.spotify-embed{margin-top:32px;border-radius:0;overflow:hidden;}
 .more{padding:80px 48px;border-bottom:1px solid #1a1a1a;}
 .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
 .more-card{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--dark);cursor:pointer;text-decoration:none;display:block;transition:transform 0.3s;}
@@ -69,7 +96,7 @@ h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36p
 .more-bg{position:absolute;inset:0;background-size:cover;background-position:center top;transition:transform 0.4s;}
 .more-card:hover .more-bg{transform:scale(1.05);}
 .more-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);}
-.more-overlay{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;background:rgba(45,143,255,0.08);}
+.more-overlay{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;}
 .more-info{position:absolute;bottom:0;left:0;right:0;padding:18px 16px 20px;}
 .more-artist{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;text-transform:uppercase;line-height:0.95;color:var(--white);display:block;}
 .more-genre{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;text-transform:uppercase;display:block;margin-top:3px;}
@@ -90,96 +117,203 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
 .footer-socials a{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;}
 .footer-socials a:hover{color:var(--white);}
 @media(max-width:900px){.bio{grid-template-columns:1fr;gap:48px;}.video-grid{grid-template-columns:1fr;}.interview-inner{grid-template-columns:1fr;gap:32px;}.more-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;gap:32px;}}
-@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
+@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.nav-mobile{display:flex;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
 </style>
 </head>
 <body>
 <nav>
-<a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
-<ul class="nav-links">
-<li><a href="sessions.html">Sessions</a></li>
-<li><a href="podcast.html">Podcast</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="sponsorship.html">Sponsorship</a></li>
-<li><a href="submit.html">Artists</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<a href="contact.html" class="nav-cta">Partner With Us</a>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Partner With Us</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile" id="mobileMenu">
+  <div class="nav-mobile-label">CDF Music Group</div>
+  <ul>
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get In Touch</a>
+</div>
+
 <section class="hero">
-<div class="hero-bg"></div>
-<div class="hero-overlay"></div>
-<div class="hero-accent-bar"></div>
-<div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
-<h1 class="hero-name">Eli Parker</h1>
-<div class="hero-genre">Singer-Songwriter</div>
-<div class="hero-tags"><span class="hero-tag">Illinois</span><span class="hero-tag">Singer-Songwriter</span><span class="hero-tag">Original Music</span><span class="hero-tag">Independent</span></div>
+  <div class="hero-bg" style="background-image:url('eli-parker.png');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-bar"></div>
+  <div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
+  <h1 class="hero-name">Eli Parker</h1>
+  <div class="hero-genre">Singer / Songwriter</div>
+  <div class="hero-tags">
+    <span class="hero-tag">Original Music</span>
+    <span class="hero-tag">Singer-Songwriter</span>
+    <span class="hero-tag">Indie</span>
+    <span class="hero-tag">CDF Session</span>
+  </div>
 </section>
+
 <section class="bio">
-<div>
-<div class="bio-label">About Eli Parker</div>
-<h2>Songs From<br>The Heart</h2>
-<p>Eli Parker is an independent singer-songwriter who creates deeply personal original music rooted in honest storytelling. Based in the Midwest, Parker has built a following through live performances and recordings that put the song and the emotion behind it first.</p>
-<p>His music draws from a wide range of influences across folk, rock, and Americana, blending acoustic instrumentation with lyrics that feel lived-in and genuine. <strong>Every performance is a direct connection between the artist and the listener</strong>, unfiltered and unproduced.</p>
-<p>Parker is a natural fit for the CDF platform, where original music and authentic storytelling are the only requirements. His session is one of the more intimate performances in the CDF catalog.</p>
-</div>
-<div class="bio-aside">
-<div class="bio-fact"><div class="bio-fact-title">The CDF Session</div><div class="bio-fact-desc">Eli brought his original music into the CDF studio for a live session that showcases exactly what the platform is built for: real artists, real songs, no filter.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Original Music</div><div class="bio-fact-desc">Every song is original. Every performance is live. No covers, no compromises.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Midwest Independent</div><div class="bio-fact-desc">Building a fanbase through consistent live performance and original recorded music across the Midwest and beyond.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Listen on Spotify</div><div class="bio-fact-desc">Eli Parker's full catalog is available on Spotify and all major streaming platforms.</div></div>
-</div>
+  <div>
+    <div class="bio-label">About Eli Parker</div>
+    <h2>Songs That<br>Stay With You</h2>
+    <p>Eli Parker is a singer-songwriter whose music sits at the intersection of introspection and craft. His songs build slowly and land hard, drawing on the kind of writing that rewards repeated listening. He is the sort of artist who comes into a room with a guitar and a few songs and ends up being the thing everyone talks about afterward.</p>
+    <p>His CDF session featured two original performances that showcased the range in his writing, from the atmospheric pull of <strong>Violet Night</strong> to the rhythmic momentum of <strong>Microspoce</strong>. Both performances capture an artist who is deeply comfortable with his sound and uninterested in pretense.</p>
+    <p>Parker's music is built for people who listen closely. His melodies are deceptively simple and his lyrics earn their weight. The Jam w/ Jason conversation dug into his creative process, influences, and what drives the work.</p>
+  </div>
+  <div class="bio-aside">
+    <div class="bio-fact"><div class="bio-fact-title">The CDF Session</div><div class="bio-fact-desc">Eli performed two original songs live in the CDF studio and sat down with Jason for a conversation about songwriting, influences, and his approach to the craft.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Violet Night</div><div class="bio-fact-desc">A cinematic, atmospheric performance that captures the depth of Eli's writing and his ability to hold a room with a single guitar and his voice.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Microspoce</div><div class="bio-fact-desc">The second performance brought a different energy, rhythmic and forward-moving, showing the range across his catalog.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Original Only</div><div class="bio-fact-desc">Every song performed at CDF is an original. No covers, no setlist filler. Eli Parker brings his own music every time.</div></div>
+  </div>
 </section>
+
 <section class="performances">
-<div class="section-label">Live Performances</div>
-<h2>Watch Eli<br>Perform</h2>
-<div class="video-grid">
-<div class="video-card">
-<div class="video-embed">
-<iframe src="https://www.youtube.com/embed/PWwlIgFpbyM" title="Eli Parker Live Session at CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-</div>
-<div class="video-info">
-<div class="video-title">Live Session — CDF Music Group</div>
-<div class="video-meta">Singer-Songwriter &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
-</div>
-</div>
-</div>
+  <div class="section-label">Live Performances</div>
+  <h2>Watch Eli<br><span style="color:var(--accent);">Perform</span></h2>
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/bEQfqjeZuXg" title="Violet Night &#8212; CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Violet Night &#8212; CDF Music Group</div>
+        <div class="video-meta">Singer-Songwriter &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/Mh9xpD6yEc0" title="Microspoce &#8212; CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Microspoce &#8212; CDF Music Group</div>
+        <div class="video-meta">Singer-Songwriter &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="interview">
-<div class="section-label">Jam w/ Jason</div>
-<h2>The<br><span style="color:var(--accent);">Interview</span></h2>
-<div class="interview-inner">
-<div><p class="interview-recap">Jason and Eli sit down for a conversation about songwriting, the creative process behind his original music, what drives him to perform, and what the independent music path looks like from the inside. An honest and personal exchange between two musicians.</p></div>
-<div class="interview-video"><div class="video-embed"><iframe src="https://www.youtube.com/embed/PWwlIgFpbyM" title="Eli Parker Interview — Jam w/ Jason on CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-</div>
+  <div class="section-label">Jam w/ Jason</div>
+  <h2>The<br><span style="color:var(--accent);">Interview</span></h2>
+  <div class="interview-inner">
+    <div>
+      <p class="interview-recap">Jason and Eli talk about his songwriting process, what draws him to introspective and atmospheric material, how he approaches performing live, and what the music means to him. One of the more thoughtful conversations in the Jam w/ Jason catalog.</p>
+    </div>
+    <div class="interview-video">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/8Msud-VTJiQ" title="Eli Interview &#8212; Jam w/ Jason on CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="spotify-section">
-<div class="section-label">Listen</div>
-<h2>Eli Parker<br><span style="color:#1DB954;">On Spotify</span></h2>
-<div class="spotify-embed">
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/1FGz7Uj562GUs2C5SsrU80?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+  <div class="section-label">Listen</div>
+  <h2>Eli Parker<br><span style="color:#1DB954;">On Spotify</span></h2>
+  <div class="spotify-embed">
+    <iframe style="border-radius:0" src="https://open.spotify.com/embed/artist/1FGz7Uj562GUs2C5SsrU80?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
 </section>
+
 <section class="more">
-<div class="section-label">More Sessions</div>
-<h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
-<div class="more-grid">
-<a href="ivy-ford.html" class="more-card"><div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0d1a20;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Ivy Ford</span><span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span></div></a>
-<a href="sophie-coyote.html" class="more-card"><div class="more-bg" style="background-image:url('sophie-coyote.png');background-size:cover;background-position:center top;background-color:#1a0d0a;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Sophie Coyote</span><span class="more-genre" style="color:#E67E22;">Indie Folk</span></div></a>
-<a href="marques-morel.html" class="more-card"><div class="more-bg" style="background-image:url('marques-morel.png');background-size:cover;background-position:center top;background-color:#0d1520;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Marques Morel</span><span class="more-genre" style="color:#27AE60;">Folk / Blues</span></div></a>
-</div>
+  <div class="section-label">More Sessions</div>
+  <h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
+  <div class="more-grid">
+    <a href="ivy-ford.html" class="more-card">
+      <div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0d1020;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(45,143,255,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Ivy Ford</span>
+        <span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span>
+      </div>
+    </a>
+    <a href="rachel-neal.html" class="more-card">
+      <div class="more-bg" style="background-image:url('rachel-neal.png');background-size:cover;background-position:center top;background-color:#0d1a0d;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(62,207,142,0.07);"></div>
+      <div class="more-info">
+        <span class="more-artist">Rachel Neal</span>
+        <span class="more-genre" style="color:#3ecf8e;">Country / Americana</span>
+      </div>
+    </a>
+    <a href="marques-morel.html" class="more-card">
+      <div class="more-bg" style="background-image:url('marques-morel.png');background-size:cover;background-position:center top;background-color:#0d1a0d;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(39,174,96,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Marques Morel</span>
+        <span class="more-genre" style="color:#27AE60;">Jazz / Soul</span>
+      </div>
+    </a>
+  </div>
 </section>
-<div class="back-band"><h3>See All Sessions</h3><a href="sessions.html" class="btn-white">Full Artist Roster</a></div>
+
+<div class="back-band">
+  <h3>See All Sessions</h3>
+  <a href="sessions.html" class="btn-white">Full Artist Roster</a>
+</div>
+
 <footer>
-<div class="footer-inner">
-<div><div class="footer-brand">CDF</div><div class="footer-tagline">Independent live music content platform. Original artists only.</div></div>
-<div class="footer-col"><h4>Navigation</h4><a href="sessions.html">Sessions</a><a href="podcast.html">Podcast</a><a href="about.html">About</a><a href="sponsorship.html">Sponsorship</a><a href="submit.html">Artist Submission</a><a href="contact.html">Contact</a></div>
-<div class="footer-col"><h4>Contact</h4><a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a><a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a></div>
-</div>
-<div class="footer-bottom">
-<div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
-<div class="footer-socials"><a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a><a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a><a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a><a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a><a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a></div>
-</div>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">CDF</div>
+      <div class="footer-tagline">Independent live music content platform. Original artists only.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="sessions.html">Sessions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="submit.html">Artist Submission</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a>
+      <a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a>
+      <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a>
+    </div>
+  </div>
 </footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
 </body>
 </html>
