@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blue Rose — Chicago Indie Folk Band | CDF Music Group Live Session</title>
-<meta name="description" content="Watch Blue Rose perform live at CDF Music Group. Chicago indie folk band. Studio session and interview from the CDF studio in NW Illinois.">
+<title>Blue Rose — Country Jam | CDF Music Group Live Session</title>
+<meta name="description" content="Watch Blue Rose perform live at CDF Music Group. Chicago Country Jam band performing Blue Moon and I'm So Tired live in session. Interview included.">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
@@ -90,89 +90,133 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
 .footer-socials a{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;}
 .footer-socials a:hover{color:var(--white);}
 @media(max-width:900px){.bio{grid-template-columns:1fr;gap:48px;}.video-grid{grid-template-columns:1fr;}.interview-inner{grid-template-columns:1fr;gap:32px;}.more-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;gap:32px;}}
-@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:transform 0.3s,opacity 0.3s,width 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 40px 60px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.nav-mobile.open{opacity:1;pointer-events:all;}
+.nav-mobile ul{list-style:none;display:flex;flex-direction:column;gap:0;width:100%;}
+.nav-mobile ul li{border-bottom:1px solid #1a1a1a;}
+.nav-mobile ul li a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(32px,8vw,48px);text-transform:uppercase;letter-spacing:0.02em;color:#333;text-decoration:none;display:block;padding:16px 0;transition:color 0.2s;}
+.nav-mobile ul li a:hover{color:var(--white);}
+.nav-mobile-cta{margin-top:40px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--white);padding:14px 32px;text-decoration:none;display:inline-block;}
+.nav-mobile-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#333;margin-bottom:32px;}
+@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.nav-mobile{display:flex;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
 </style>
 </head>
 <body>
 <nav>
-<a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
-<ul class="nav-links">
-<li><a href="sessions.html">Sessions</a></li>
-<li><a href="podcast.html">Podcast</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="sponsorship.html">Sponsorship</a></li>
-<li><a href="submit.html">Artists</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<a href="contact.html" class="nav-cta">Partner With Us</a>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Partner With Us</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="nav-mobile" id="mobileMenu">
+  <div class="nav-mobile-label">CDF Music Group</div>
+  <ul>
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get In Touch</a>
+</div>
 <section class="hero">
-<div class="hero-bg"></div>
-<div class="hero-overlay"></div>
-<div class="hero-accent-bar"></div>
-<div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
-<h1 class="hero-name">Blue Rose</h1>
-<div class="hero-genre">Indie Folk</div>
-<div class="hero-tags"><span class="hero-tag">Chicago, IL</span><span class="hero-tag">Indie Folk</span><span class="hero-tag">Band</span><span class="hero-tag">Original Music</span></div>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-bar"></div>
+  <div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
+  <h1 class="hero-name">Blue Rose</h1>
+  <div class="hero-genre">Country Jam</div>
+  <div class="hero-tags"><span class="hero-tag">Chicago, IL</span><span class="hero-tag">Country</span><span class="hero-tag">Jam Band</span><span class="hero-tag">Live Music</span></div>
 </section>
 <section class="bio">
-<div>
-<div class="bio-label">About Blue Rose</div>
-<h2>Chicago Folk<br>Done Right</h2>
-<p>Blue Rose is a Chicago-based indie folk band delivering original music that blends warm acoustic arrangements with rich harmonies and honest lyricism. The band has built a loyal following in the Chicago live music scene through consistent performance and a dedication to original material.</p>
-<p>Their sound draws from the tradition of American folk and indie singer-songwriter music, crafting songs that feel both timeless and deeply rooted in the here and now. <strong>Blue Rose is the kind of band that sounds better every time you hear them</strong>, with layers that reveal themselves over multiple listens.</p>
-<p>The band came to CDF for a full studio session and long-form interview, delivering one of the platform's warmest and most melodically rich performances to date.</p>
-</div>
-<div class="bio-aside">
-<div class="bio-fact"><div class="bio-fact-title">The CDF Session</div><div class="bio-fact-desc">Blue Rose came into the CDF studio and delivered a warm, melodically rich set of original music. One of the most sonically layered sessions on the platform.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Chicago Scene</div><div class="bio-fact-desc">Active members of the Chicago indie folk scene, performing regularly at venues across the city and surrounding area.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Original Material</div><div class="bio-fact-desc">All original music. No covers. The band writes everything they perform.</div></div>
-<div class="bio-fact"><div class="bio-fact-title">Listen on Spotify</div><div class="bio-fact-desc">Blue Rose's full catalog is available on Spotify and all major streaming platforms.</div></div>
-</div>
+  <div>
+    <div class="bio-label">About Blue Rose</div>
+    <h2>Big Sound,<br>Wide Open</h2>
+    <p>Blue Rose is a Chicago-based Country Jam band that brings a live energy to everything they do. Their sound stretches across country, rock, and jam influences, built around strong musicianship and the kind of chemistry that only comes from a band that genuinely loves playing together. They have built a loyal following across the Chicagoland area and beyond through relentless live performance.</p>
+    <p>Their sound pulls from classic country, Southern rock, and the improvisational spirit of jam music, and they weave those threads together in a way that keeps every show feeling fresh. <strong>Blue Rose is a live band first</strong>, and their CDF session captured that energy in a way a recording rarely can.</p>
+    <p>"Blue Moon" and "I'm So Tired" showed two different sides of their range, from atmospheric country cool to raw driving energy. The Jam w/ Jason interview gave the band space to talk about where they came from and what keeps them on the road.</p>
+  </div>
+  <div class="bio-aside">
+    <div class="bio-fact"><div class="bio-fact-title">The CDF Session</div><div class="bio-fact-desc">Blue Rose performed "Blue Moon" and "I'm So Tired" live in the CDF studio and sat down with Jason for a wide-ranging conversation about the band, the Chicago scene, and what keeps them on the road.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Chicago Scene</div><div class="bio-fact-desc">Based out of Chicago and performing consistently across the Chicagoland area, Blue Rose has built their following the old-fashioned way: one show at a time, one room at a time.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">The Sound</div><div class="bio-fact-desc">Country at the core, with the open-ended spirit of jam music woven through. Big guitars, strong vocals, and the confidence of a band that knows exactly what it is.</div></div>
+    <div class="bio-fact"><div class="bio-fact-title">Listen on Spotify</div><div class="bio-fact-desc">Blue Rose's full catalog is available on Spotify and all major streaming platforms.</div></div>
+  </div>
 </section>
 <section class="performances">
-<div class="section-label">Live Performances</div>
-<h2>Watch Blue Rose<br>Perform</h2>
-<div class="video-grid">
-<div class="video-card">
-<div class="video-embed"><iframe src="https://www.youtube.com/embed/FqAdD2IIiIg" title="Blue Rose Live Session at CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-<div class="video-info"><div class="video-title">Live Session — CDF Music Group</div><div class="video-meta">Indie Folk &nbsp;&middot;&nbsp; Original Music &nbsp;&middot;&nbsp; CDF Studio</div></div>
-</div>
-</div>
+  <div class="section-label">Live Performances</div>
+  <h2>Watch Blue Rose<br>Perform</h2>
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="video-embed"><iframe src="https://www.youtube.com/embed/FqAdD2IIiIg" title="Blue Rose &#8212; Blue Moon | CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-info"><div class="video-title">"Blue Moon" &#8212; CDF Music Group</div><div class="video-meta">Country Jam &nbsp;&middot;&nbsp; Live Performance &nbsp;&middot;&nbsp; CDF Studio</div></div>
+    </div>
+    <div class="video-card">
+      <div class="video-embed"><iframe src="https://www.youtube.com/embed/-FdUpRssshw" title="Blue Rose &#8212; I'm So Tired | CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <div class="video-info"><div class="video-title">"I'm So Tired" &#8212; CDF Music Group</div><div class="video-meta">Country Jam &nbsp;&middot;&nbsp; Live Performance &nbsp;&middot;&nbsp; CDF Studio</div></div>
+    </div>
+  </div>
 </section>
 <section class="interview">
-<div class="section-label">Jam w/ Jason</div>
-<h2>The<br><span style="color:var(--accent);">Interview</span></h2>
-<div class="interview-inner">
-<div><p class="interview-recap">Jason sits down with Blue Rose for a conversation about the band's origins, the Chicago folk scene, what drives their songwriting, and what it means to build something original in a city full of music.</p></div>
-<div class="interview-video"><div class="video-embed"><iframe src="https://www.youtube.com/embed/FqAdD2IIiIg" title="Blue Rose Interview — Jam w/ Jason on CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
-</div>
+  <div class="section-label">Jam w/ Jason</div>
+  <h2>The<br><span style="color:var(--accent);">Interview</span></h2>
+  <div class="interview-inner">
+    <div><p class="interview-recap">Jason sits down with Blue Rose for a conversation about the band's origins, the Chicago music scene, their country-meets-jam approach to performing live, and what keeps them coming back to the stage. A candid look at a band built from the ground up on the strength of their live show.</p></div>
+    <div class="interview-video"><div class="video-embed"><iframe src="https://www.youtube.com/embed/r1WcKhr1_x0" title="Blue Rose Interview — Jam w/ Jason on CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+  </div>
 </section>
 <section class="spotify-section">
-<div class="section-label">Listen</div>
-<h2>Blue Rose<br><span style="color:#1DB954;">On Spotify</span></h2>
-<div class="spotify-embed"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/7KE4n4LMBbooOGuFFCqqKL?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+  <div class="section-label">Listen</div>
+  <h2>Blue Rose<br><span style="color:#1DB954;">On Spotify</span></h2>
+  <div class="spotify-embed"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/7KE4n4LMBbooOGuFFCqqKL?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
 </section>
-<section class="more">
-<div class="section-label">More Sessions</div>
-<h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
-<div class="more-grid">
-<a href="ivy-ford.html" class="more-card"><div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0d1a20;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Ivy Ford</span><span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span></div></a>
-<a href="sophie-coyote.html" class="more-card"><div class="more-bg" style="background-image:url('sophie-coyote.png');background-size:cover;background-position:center top;background-color:#1a0d0a;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Sophie Coyote</span><span class="more-genre" style="color:#E67E22;">Indie Folk</span></div></a>
-<a href="marques-morel.html" class="more-card"><div class="more-bg" style="background-image:url('marques-morel.png');background-size:cover;background-position:center top;background-color:#0d1520;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Marques Morel</span><span class="more-genre" style="color:#27AE60;">Folk / Blues</span></div></a>
+<div style="background:var(--black);padding:40px 48px;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+  <div style="display:flex;align-items:center;gap:16px;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#555" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#555" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#555"/></svg>
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:0.05em;color:#444;">Follow Blue Rose on Instagram</div>
+      <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#2a2a2a;margin-top:3px;">@blue_rose_band</div>
+    </div>
+  </div>
+  <a href="https://www.instagram.com/blue_rose_band" target="_blank" style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#444;border:1px solid #2a2a2a;padding:10px 24px;text-decoration:none;transition:color 0.2s,border-color 0.2s;white-space:nowrap;" onmouseover="this.style.color='#fff';this.style.borderColor='#555'" onmouseout="this.style.color='#444';this.style.borderColor='#2a2a2a'">Follow on Instagram</a>
 </div>
+
+<section class="more">
+  <div class="section-label">More Sessions</div>
+  <h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
+  <div class="more-grid">
+    <a href="ivy-ford.html" class="more-card"><div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0d1a20;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Ivy Ford</span><span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span></div></a>
+    <a href="sophie-coyote.html" class="more-card"><div class="more-bg" style="background-image:url('sophie-coyote.png');background-size:cover;background-position:center top;background-color:#1a0d0a;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Sophie Coyote</span><span class="more-genre" style="color:#E67E22;">Indie Folk</span></div></a>
+    <a href="marques-morel.html" class="more-card"><div class="more-bg" style="background-image:url('marques-morel.png');background-size:cover;background-position:center top;background-color:#0d1520;"></div><div class="more-gradient"></div><div class="more-overlay"></div><div class="more-info"><span class="more-artist">Marques Morel</span><span class="more-genre" style="color:#27AE60;">Folk / Blues</span></div></a>
+  </div>
 </section>
 <div class="back-band"><h3>See All Sessions</h3><a href="sessions.html" class="btn-white">Full Artist Roster</a></div>
 <footer>
-<div class="footer-inner">
-<div><div class="footer-brand">CDF</div><div class="footer-tagline">Independent live music content platform. Original artists only.</div></div>
-<div class="footer-col"><h4>Navigation</h4><a href="sessions.html">Sessions</a><a href="podcast.html">Podcast</a><a href="about.html">About</a><a href="sponsorship.html">Sponsorship</a><a href="submit.html">Artist Submission</a><a href="contact.html">Contact</a></div>
-<div class="footer-col"><h4>Contact</h4><a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a><a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a></div>
-</div>
-<div class="footer-bottom">
-<div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
-<div class="footer-socials"><a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a><a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a><a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a><a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a><a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a></div>
-</div>
+  <div class="footer-inner">
+    <div><div class="footer-brand">CDF</div><div class="footer-tagline">Independent live music content platform. Original artists only.</div></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="sessions.html">Sessions</a><a href="podcast.html">Podcast</a><a href="about.html">About</a><a href="sponsorship.html">Sponsorship</a><a href="submit.html">Artist Submission</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a><a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
+    <div class="footer-socials"><a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a><a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a><a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a><a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a><a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a></div>
+  </div>
 </footer>
+<script>
+const hamburger=document.getElementById('hamburger');const mobileMenu=document.getElementById('mobileMenu');hamburger.addEventListener('click',()=>{const isOpen=mobileMenu.classList.toggle('open');hamburger.classList.toggle('open');document.body.style.overflow=isOpen?'hidden':'';});mobileMenu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileMenu.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';});});
+</script>
 </body>
 </html>
