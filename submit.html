@@ -233,9 +233,24 @@ nav{
 }
 .submit-btn:hover{background:var(--blue);color:var(--white);}
 .submit-btn:disabled{opacity:0.5;cursor:default;}
-.form-msg{font-size:13px;margin-top:4px;min-height:18px;}
+.form-msg{font-size:14px;margin-top:12px;min-height:18px;font-weight:500;}
 .form-msg.success{color:var(--blue);}
-.form-msg.error{color:var(--pink);}
+.form-msg.error{color:var(--pink);padding:14px 16px;background:rgba(255,61,174,0.08);border-left:3px solid var(--pink);}
+.form-success{
+  text-align:center;padding:48px 24px;
+  background:var(--dark);border-left:3px solid var(--blue);
+}
+.form-success-icon{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--blue);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin:0 auto 20px;
+}
+.form-success-title{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;
+  text-transform:uppercase;letter-spacing:0.02em;color:var(--white);margin-bottom:10px;
+}
+.form-success-desc{font-size:14px;color:#777;line-height:1.7;max-width:360px;margin:0 auto;}
 
 /* FOOTER */
 footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;}
@@ -460,9 +475,16 @@ footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;
       </div>
 
       <button type="submit" class="submit-btn" id="artistSubmitBtn">Submit Application</button>
-      <div class="form-msg" id="artistFormMsg"></div>
 
     </form>
+
+    <div class="form-msg" id="artistFormMsg"></div>
+
+    <div class="form-success" id="artistFormSuccess" style="display:none;">
+      <div class="form-success-icon">&#10003;</div>
+      <div class="form-success-title">Application Received</div>
+      <div class="form-success-desc">Thanks for applying. We review every submission and will be in touch if it's a fit.</div>
+    </div>
 
   </div>
 
@@ -580,6 +602,7 @@ newsletterForm.addEventListener('submit', async (e) => {
 const artistForm = document.getElementById('artistForm');
 const artistSubmitBtn = document.getElementById('artistSubmitBtn');
 const artistFormMsg = document.getElementById('artistFormMsg');
+const artistFormSuccess = document.getElementById('artistFormSuccess');
 
 const HUBSPOT_PORTAL_ID = '245925121';
 const HUBSPOT_FORM_GUID = '98f6ae2f-5ad2-4c93-aee5-06a4b2504c0f';
@@ -637,15 +660,24 @@ artistForm.addEventListener('submit', async (e) => {
       }
     );
 
+    const responseData = await response.json().catch(() => null);
+
     if (response.ok) {
+      console.log('HubSpot submission success:', responseData);
       artistForm.style.display = 'none';
-      artistFormMsg.textContent = "Thanks for applying. We'll be in touch soon.";
-      artistFormMsg.className = 'form-msg success';
+      artistFormSuccess.style.display = 'block';
+      artistFormMsg.textContent = '';
     } else {
-      throw new Error('Submission failed');
+      console.error('HubSpot submission rejected:', response.status, responseData);
+      const detail = responseData && responseData.message ? ` (${responseData.message})` : '';
+      artistFormMsg.textContent = `Something went wrong submitting your application${detail}. Please try again or email us directly at info@cdfmusicgroup.com.`;
+      artistFormMsg.className = 'form-msg error';
+      artistSubmitBtn.disabled = false;
+      artistSubmitBtn.textContent = 'Submit Application';
     }
   } catch (err) {
-    artistFormMsg.textContent = 'Something went wrong. Please try again or email us directly.';
+    console.error('HubSpot submission network error:', err);
+    artistFormMsg.textContent = 'Something went wrong. Please check your connection and try again, or email us directly at info@cdfmusicgroup.com.';
     artistFormMsg.className = 'form-msg error';
     artistSubmitBtn.disabled = false;
     artistSubmitBtn.textContent = 'Submit Application';
