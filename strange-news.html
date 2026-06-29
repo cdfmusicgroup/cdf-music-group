@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.cdfmusicgroup.com/strange-news.html">
+<title>Strange News &#8212; "Death Rides The Winds of September" | CDF Music Group Sessions</title>
+<meta name="description" content="Watch Strange News perform Death Rides The Winds of September live at CDF Music Group. Heavy rock from Morrison, Illinois, recorded as the first full band session in the CDF studio.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#0a0a0a;--near-black:#111111;--dark:#1a1a1a;
+  --white:#ffffff;--muted:#888888;
+  --blue:#2D8FFF;--purple:#9B5CFF;--amber:#C96C1A;
+  --pink:#FF3DAE;--red:#E82424;--green:#3ecf8e;
+  --accent:#2D8FFF;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 48px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #1e1e1e;
+}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--blue);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--black);background:var(--white);padding:9px 20px;text-decoration:none;transition:background 0.2s,color 0.2s;}
+.nav-cta:hover{background:var(--blue);color:var(--white);}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:transform 0.3s,opacity 0.3s,width 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-mobile{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 40px 60px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.nav-mobile.open{opacity:1;pointer-events:all;}
+.nav-mobile ul{list-style:none;display:flex;flex-direction:column;gap:0;width:100%;}
+.nav-mobile ul li{border-bottom:1px solid #1a1a1a;}
+.nav-mobile ul li a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(32px,8vw,48px);text-transform:uppercase;letter-spacing:0.02em;color:#333;text-decoration:none;display:block;padding:16px 0;transition:color 0.2s;}
+.nav-mobile ul li a:hover{color:var(--white);}
+.nav-mobile-cta{margin-top:40px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--white);padding:14px 32px;text-decoration:none;display:inline-block;}
+.nav-mobile-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#333;margin-bottom:32px;}
+.hero{min-height:90vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 72px;}
+.hero-bg{position:absolute;inset:0;background-image:url('justin-terry.png');background-size:cover;background-position:center top;filter:brightness(0.5);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.95) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.2) 100%);}
+.hero-accent-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);}
+.hero-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;position:relative;z-index:1;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--accent);}
+.hero-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(64px,9vw,130px);text-transform:uppercase;line-height:0.88;letter-spacing:-0.02em;position:relative;z-index:1;color:var(--white);}
+.hero-genre{font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:clamp(20px,2.5vw,32px);text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);position:relative;z-index:1;margin-top:8px;}
+.hero-tags{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;position:relative;z-index:1;}
+.hero-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);padding:5px 12px;}
+.bio{padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;border-bottom:1px solid #1a1a1a;align-items:start;}
+.bio-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px;}
+.bio-label::after{content:'';flex:0 0 32px;height:1px;background:var(--accent);}
+.bio h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36px,3.5vw,56px);text-transform:uppercase;line-height:0.95;margin-bottom:28px;color:var(--white);}
+.bio p{font-size:15px;color:#777;line-height:1.85;margin-bottom:18px;}
+.bio p:last-child{margin-bottom:0;}
+.bio p strong{color:var(--white);font-weight:500;}
+.bio-aside{display:flex;flex-direction:column;gap:2px;}
+.bio-fact{padding:22px 20px;background:var(--near-black);border-left:3px solid transparent;transition:border-color 0.2s;}
+.bio-fact:hover{border-left-color:var(--accent);}
+.bio-fact-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent);margin-bottom:4px;}
+.bio-fact-desc{font-size:13px;color:#555;line-height:1.5;}
+.performances{padding:80px 48px;background:var(--near-black);border-bottom:1px solid #1a1a1a;}
+.section-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:0 0 32px;height:1px;background:var(--accent);}
+h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36px,4vw,60px);text-transform:uppercase;line-height:0.95;margin-bottom:40px;}
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
+.video-card{background:var(--dark);}
+.video-embed{width:100%;aspect-ratio:16/9;background:#000;}
+.video-embed iframe{width:100%;height:100%;border:none;}
+.video-info{padding:18px 20px;border-top:1px solid #1a1a1a;}
+.video-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:0.03em;color:var(--white);margin-bottom:4px;}
+.video-meta{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#444;}
+.interview{padding:80px 48px;border-bottom:1px solid #1a1a1a;}
+.interview-inner{display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:start;}
+.interview-recap{font-size:15px;color:#666;line-height:1.8;padding-top:16px;border-top:1px solid #1a1a1a;}
+.interview-video{background:var(--dark);}
+.interview-video .video-embed{aspect-ratio:16/9;}
+.spotify-section{padding:80px 48px;background:var(--near-black);border-bottom:1px solid #1a1a1a;}
+.spotify-embed{margin-top:32px;border-radius:0;overflow:hidden;}
+.more{padding:80px 48px;border-bottom:1px solid #1a1a1a;}
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
+.more-card{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--dark);cursor:pointer;text-decoration:none;display:block;transition:transform 0.3s;}
+.more-card:hover{transform:scale(1.02);z-index:2;}
+.more-card:hover .more-overlay{opacity:1;}
+.more-bg{position:absolute;inset:0;background-size:cover;background-position:center top;transition:transform 0.4s;}
+.more-card:hover .more-bg{transform:scale(1.05);}
+.more-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.3) 60%,transparent 100%);}
+.more-overlay{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;}
+.more-info{position:absolute;bottom:0;left:0;right:0;padding:18px 16px 20px;}
+.more-artist{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;text-transform:uppercase;line-height:0.95;color:var(--white);display:block;}
+.more-genre{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;text-transform:uppercase;display:block;margin-top:3px;}
+.back-band{background:var(--accent);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;gap:32px;}
+.back-band h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase;color:var(--white);}
+.btn-white{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);background:var(--white);padding:12px 28px;text-decoration:none;white-space:nowrap;transition:background 0.2s;display:inline-block;}
+.btn-white:hover{background:var(--black);color:var(--white);}
+footer{background:var(--black);padding:60px 48px 40px;border-top:1px solid #111;}
+.footer-inner{display:grid;grid-template-columns:1.1fr 0.8fr 0.8fr 1.3fr;gap:48px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid #1a1a1a;}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;color:transparent;-webkit-text-stroke:2px #2a2a2a;line-height:1;margin-bottom:16px;}
+.footer-tagline{font-size:13px;color:#444;line-height:1.7;max-width:280px;}
+.footer-col h4{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#444;margin-bottom:20px;}
+.footer-col a{display:block;font-size:14px;color:#555;text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-newsletter-desc{font-size:13px;color:#555;line-height:1.6;margin-bottom:18px;max-width:280px;}
+.newsletter-form{display:flex;gap:8px;max-width:320px;}
+.newsletter-input{flex:1;background:var(--near-black);border:1px solid #2a2a2a;color:var(--white);font-family:'Barlow',sans-serif;font-size:13px;padding:11px 14px;outline:none;transition:border-color 0.2s;}
+.newsletter-input::placeholder{color:#444;}
+.newsletter-input:focus{border-color:var(--blue);}
+.newsletter-btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--black);background:var(--white);border:none;padding:11px 18px;cursor:pointer;transition:background 0.2s;white-space:nowrap;}
+.newsletter-btn:hover{background:var(--blue);color:var(--white);}
+.newsletter-btn:disabled{opacity:0.5;cursor:default;}
+.newsletter-msg{font-size:12px;margin-top:10px;min-height:16px;}
+.newsletter-msg.success{color:var(--blue);}
+.newsletter-msg.error{color:var(--red);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.footer-legal{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.1em;color:#333;text-transform:uppercase;}
+.footer-socials{display:flex;gap:20px;}
+.footer-socials a{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#333;text-decoration:none;transition:color 0.2s;}
+.footer-socials a:hover{color:var(--white);}
+@media(max-width:900px){.bio{grid-template-columns:1fr;gap:48px;}.video-grid{grid-template-columns:1fr;}.interview-inner{grid-template-columns:1fr;gap:32px;}.more-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;gap:32px;}}
+@media(max-width:600px){nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.nav-mobile{display:flex;}.hero{padding:0 24px 56px;}.bio,.performances,.interview,.spotify-section,.more{padding:60px 24px;}.back-band{padding:32px 24px;flex-direction:column;align-items:flex-start;}.more-grid{grid-template-columns:1fr;}footer{padding:48px 24px 32px;}.footer-inner{grid-template-columns:1fr;gap:32px;}.newsletter-form{max-width:100%;}.footer-bottom{flex-direction:column;gap:16px;text-align:center;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">CDF <span>Music Group</span></a>
+  <ul class="nav-links">
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Partner With Us</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <div class="nav-mobile-label">CDF Music Group</div>
+  <ul>
+    <li><a href="sessions.html">Sessions</a></li>
+    <li><a href="podcast.html">Podcast</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsorship.html">Sponsorship</a></li>
+    <li><a href="submit.html">Artists</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-mobile-cta">Get In Touch</a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('strange-news.png');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-bar"></div>
+  <div class="hero-eyebrow">CDF Music Group &nbsp;&middot;&nbsp; Live Session</div>
+  <h1 class="hero-name">Strange News</h1>
+  <div class="hero-genre">Heavy Rock</div>
+  <div class="hero-tags">
+    <span class="hero-tag">Morrison, IL</span>
+    <span class="hero-tag">Heavy Rock</span>
+    <span class="hero-tag">First Full Band</span>
+    <span class="hero-tag">CDF Session</span>
+  </div>
+</section>
+
+<section class="bio">
+  <div>
+    <div class="bio-label">About Strange News</div>
+    <h2>Riff Driven<br>Heavy Rock</h2>
+    <p>Strange News is a heavy rock outfit out of Morrison, Illinois, playing loud, riff forward rock and roll with a heavier, doom leaning edge. The band keeps things simple: big dual guitar parts, a driving rhythm section, and no gimmicks.</p>
+    <p>Their CDF session captures Death Rides The Winds of September, a blues rock leaning track pulled from the band's debut EP, Liar's Curse. It is the kind of riff built for a loud truck stereo as much as a record.</p>
+    <p>Strange News also holds a small piece of CDF history. <strong>They were the first full band to record a session in the CDF studio</strong>, setting the bar for every group that has come through since.</p>
+  </div>
+  <div class="bio-aside">
+    <div class="bio-fact">
+      <div class="bio-fact-title">The CDF Session</div>
+      <div class="bio-fact-desc">Strange News came through the CDF studio for a one song session, the first full band CDF Music Group has hosted.</div>
+    </div>
+    <div class="bio-fact">
+      <div class="bio-fact-title">Heavy Rock Roots</div>
+      <div class="bio-fact-desc">The band draws on classic rock and doom leaning heavy rock, based out of Morrison, Illinois along the Mississippi River.</div>
+    </div>
+    <div class="bio-fact">
+      <div class="bio-fact-title">Debut EP</div>
+      <div class="bio-fact-desc">Liar's Curse is the band's first full length release, following an earlier demo.</div>
+    </div>
+    <div class="bio-fact">
+      <div class="bio-fact-title">First Full Band</div>
+      <div class="bio-fact-desc">Every CDF session before this one was a solo artist or duo. Strange News was the first complete band in the room.</div>
+    </div>
+  </div>
+</section>
+
+<section class="performances">
+  <div class="section-label">Live Performance</div>
+  <h2>Watch Strange News<br><span style="color:var(--accent);">Perform</span></h2>
+  <div class="video-grid">
+    <div class="video-card">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/l9fJM29q1X0" title="Strange News &#8212; Death Rides The Winds of September, Live at CDF Music Group" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Death Rides The Winds of September</div>
+        <div class="video-meta">Heavy Rock &nbsp;&middot;&nbsp; Live Performance &nbsp;&middot;&nbsp; CDF Studio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--black);padding:40px 48px;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+  <div style="display:flex;align-items:center;gap:16px;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#555" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#555" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#555"/></svg>
+    <div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:0.05em;color:#444;">Follow Strange News on Instagram</div>
+      <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#2a2a2a;margin-top:3px;">@strangenewsband</div>
+    </div>
+  </div>
+  <a href="https://www.instagram.com/strangenewsband/" target="_blank" style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#444;border:1px solid #2a2a2a;padding:10px 24px;text-decoration:none;transition:color 0.2s,border-color 0.2s;white-space:nowrap;" onmouseover="this.style.color='#fff';this.style.borderColor='#555'" onmouseout="this.style.color='#444';this.style.borderColor='#2a2a2a'">Follow on Instagram</a>
+</div>
+
+<section class="more">
+  <div class="section-label">More Sessions</div>
+  <h2>Keep<br><span style="color:var(--blue);">Watching</span></h2>
+  <div class="more-grid">
+    <a href="ivy-ford.html" class="more-card">
+      <div class="more-bg" style="background-image:url('ivy-ford.png');background-size:cover;background-position:center top;background-color:#0a0a0a;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(45,143,255,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Ivy Ford</span>
+        <span class="more-genre" style="color:#2D8FFF;">Chicago Blues</span>
+      </div>
+    </a>
+    <a href="nathan-dean.html" class="more-card">
+      <div class="more-bg" style="background-image:url('nathan-dean.png');background-size:cover;background-position:center top;background-color:#0a0a0a;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(192,57,43,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Nathan Dean</span>
+        <span class="more-genre" style="color:#C0392B;">Country Rock</span>
+      </div>
+    </a>
+    <a href="justin-terry.html" class="more-card">
+      <div class="more-bg" style="background-image:url('justin-terry.png');background-size:cover;background-position:center top;background-color:#0a0a0a;"></div>
+      <div class="more-gradient"></div>
+      <div class="more-overlay" style="background:rgba(212,137,26,0.08);"></div>
+      <div class="more-info">
+        <span class="more-artist">Justin Terry</span>
+        <span class="more-genre" style="color:#D4891A;">Country</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<div class="back-band">
+  <h3>See All Sessions</h3>
+  <a href="sessions.html" class="btn-white">Full Artist Roster</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">CDF</div>
+      <div class="footer-tagline">Independent live music content platform. Original artists only.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="sessions.html">Sessions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="submit.html">Artist Submission</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@cdfmusicgroup.com">info@cdfmusicgroup.com</a>
+      <a href="http://www.cdfmusicgroup.com" target="_blank">cdfmusicgroup.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Stay In The Loop</h4>
+      <p class="footer-newsletter-desc">New sessions and interviews, straight to your inbox. No spam, no fluff.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Your email" required>
+        <button type="submit" class="newsletter-btn" id="newsletterBtn">Join</button>
+      </form>
+      <div class="newsletter-msg" id="newsletterMsg"></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">&copy; 2026 CDF Music Group &middot; All Rights Reserved</div>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@CDFmusicgroup" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/cdfmusicgroup" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61581557305077" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@cdfmusicgroup" target="_blank">TikTok</a>
+      <a href="https://open.spotify.com/show/1cUt0AZMlUQqe6rze3kmJK" target="_blank">Spotify</a>
+    </div>
+  </div>
+</footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+const newsletterForm = document.getElementById('newsletterForm');
+const newsletterEmail = document.getElementById('newsletterEmail');
+const newsletterBtn = document.getElementById('newsletterBtn');
+const newsletterMsg = document.getElementById('newsletterMsg');
+const NEWSLETTER_PORTAL_ID = '245925121';
+const NEWSLETTER_FORM_GUID = '91a94f55-706a-4075-9ab7-ff3778b69ea8';
+newsletterForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = newsletterEmail.value.trim();
+  if (!email) return;
+  newsletterBtn.disabled = true;
+  newsletterBtn.textContent = '...';
+  newsletterMsg.textContent = '';
+  newsletterMsg.className = 'newsletter-msg';
+  try {
+    const response = await fetch(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${NEWSLETTER_PORTAL_ID}/${NEWSLETTER_FORM_GUID}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fields: [{ name: 'email', value: email }],
+          context: { pageUri: window.location.href, pageName: document.title }
+        })
+      }
+    );
+    if (response.ok) {
+      newsletterForm.style.display = 'none';
+      newsletterMsg.textContent = "You're in. Thanks for signing up.";
+      newsletterMsg.className = 'newsletter-msg success';
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    newsletterMsg.textContent = 'Something went wrong. Please try again.';
+    newsletterMsg.className = 'newsletter-msg error';
+    newsletterBtn.disabled = false;
+    newsletterBtn.textContent = 'Join';
+  }
+});
+</script>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
